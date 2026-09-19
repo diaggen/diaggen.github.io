@@ -1,0 +1,172 @@
+{
+  "binding_validation": {
+    "atlas_bilinear_padding": true,
+    "atlas_padding_pixels": 8,
+    "atlas_resolution": 1024,
+    "binding_method": "exact_xatlas_vmapping_to_final_tet_vertex",
+    "boundary_face_count": 7546,
+    "coordinate_frame": "metric_gltf_y_up",
+    "internal_face_count": 54511,
+    "max_rest_alignment_error_m": 7.450580596923828e-09,
+    "physics_vertex_count": 6910,
+    "seam_duplicate_vertex_count": 1075,
+    "surface_vertex_count": 3777,
+    "tet_count": 29142,
+    "visual_vertex_count": 4852
+  },
+  "bundle_files": {
+    "albedo.png": {
+      "path": "albedo.png",
+      "sha256": "aefa190ac9c944700fcab5203b32a3449a89377bddfe687d7625f86c47de8f30",
+      "size_bytes": 516932
+    },
+    "post_mesh_texture_request.json": {
+      "path": "post_mesh_texture_request.json",
+      "sha256": "ed02e24d60e1eda1fe872ebf29d311eeefcf698bd90b46e1952ece95be449725",
+      "size_bytes": 1368
+    },
+    "qa/confidence.png": {
+      "path": "qa/confidence.png",
+      "sha256": "5ef20f56ec8c0d584cada7d35a7d0186f48229af61db1f407521b1abe120578a",
+      "size_bytes": 442413
+    },
+    "qa/fill_provenance.png": {
+      "path": "qa/fill_provenance.png",
+      "sha256": "a9dd95f342d3b552994b0a39faff612033e8d542e656933fe0fabf3449beb309",
+      "size_bytes": 65767
+    },
+    "qa/observed_coverage.png": {
+      "path": "qa/observed_coverage.png",
+      "sha256": "214ff13fa5009bd404a5792cd0c7b780d0ba13f487bdb3e17a0e00dac2d3743f",
+      "size_bytes": 35400
+    },
+    "qa/report.json": {
+      "path": "qa/report.json",
+      "sha256": "25a5769c455f0f11b7867bc1334331ecfb64e0ec8ef06ba7a9de5afe474f138a",
+      "size_bytes": 2140
+    },
+    "qa/rest_pose_render.png": {
+      "path": "qa/rest_pose_render.png",
+      "sha256": "4fa7ff5072810d6ab4c9f2ec0c452ada0dde92f1946256573e6c75aee12bebe6",
+      "size_bytes": 126591
+    },
+    "visual_mesh.glb": {
+      "path": "visual_mesh.glb",
+      "sha256": "31737f7951a0dcdec7ce0dd6de1936cd9182c992a29251450ddbca6bdf94f5ee",
+      "size_bytes": 705844
+    },
+    "visual_to_physics.npz": {
+      "path": "visual_to_physics.npz",
+      "sha256": "70621a7cb98cf06339474bbb3b8c40da88edc197c428d11f2a8d6f3e0724bfc9",
+      "size_bytes": 167071
+    }
+  },
+  "exact_binding": {
+    "atlas_bilinear_padding": true,
+    "atlas_fix_winding": false,
+    "atlas_padding_pixels": 8,
+    "atlas_resolution": 1024,
+    "binding_method": "exact_xatlas_vmapping_to_final_tet_vertex",
+    "boundary_face_count": 7546,
+    "coordinate_frame": "metric_gltf_y_up",
+    "internal_face_count": 54511,
+    "max_rest_alignment_error_m": 7.450580596923828e-09,
+    "physics_vertex_count": 6910,
+    "seam_duplicate_vertex_count": 1075,
+    "surface_vertex_count": 3777,
+    "tet_count": 29142,
+    "visual_vertex_count": 4852
+  },
+  "glb": {
+    "face_count": 7546,
+    "max_rest_alignment_error_m": 7.450580596923828e-09,
+    "primitive_count": 1,
+    "texture_resolution": 1024,
+    "uv_count": 4852,
+    "vertex_count": 4852
+  },
+  "inputs": {
+    "appearance_manifest_path": {
+      "path": "outputs/agentic_asset_refinement/ya20_diagno_and_reroute_Part2_6_sneaker_yiduo_20260905_100342/revisions/revision_0001/omnipart/sneaker/appearance/appearance_manifest.json",
+      "sha256": "7fc760c7d02d5a977a049f07de6515c839252bedb1bf94cbb678c6771c891375",
+      "size_bytes": 5135
+    },
+    "heterogeneous_params_path": {
+      "path": "outputs/agentic_asset_refinement/ya20_diagno_and_reroute_Part2_6_sneaker_yiduo_20260905_100342/revisions/revision_0001/mesh_processing/assign_monolithic_mesh_params/heterogeneous_params.npz",
+      "sha256": "d3c63734b2dd22ca1569c1facac981a1cff847b8b071257dca386415f95596b7",
+      "size_bytes": 934760
+    },
+    "inferred_material_path": {
+      "path": "outputs/agentic_asset_refinement/ya20_diagno_and_reroute_Part2_6_sneaker_yiduo_20260905_100342/revisions/revision_0001/material_inference/ya20_diagno_and_reroute_Part2_6_sneaker_yiduo_20260905_100342.json",
+      "sha256": "82ab5f64694ac395fa206ee4fc98f4d33eac005d78ca0c462c5d85a99fe7de5c",
+      "size_bytes": 7023
+    },
+    "metric_mesh_scaling_path": {
+      "path": "outputs/agentic_asset_refinement/ya20_diagno_and_reroute_Part2_6_sneaker_yiduo_20260905_100342/revisions/revision_0001/mesh_processing/combined_to_monolithic/metric_mesh_scaling.json",
+      "sha256": "49598b748441f7217bd1d02ceeb06f17ed8e4f3222de35071c8fd535044eed3a",
+      "size_bytes": 1704
+    },
+    "monolithic_mesh_path": {
+      "path": "outputs/agentic_asset_refinement/ya20_diagno_and_reroute_Part2_6_sneaker_yiduo_20260905_100342/revisions/revision_0001/mesh_processing/combined_to_monolithic/ya20_diagno_and_reroute_Part2_6_sneaker_yiduo_20260905_100342.mesh",
+      "sha256": "23974c72eba88ef236242ab8675585d5d4f6c68d92d86fac35625df34a53a733",
+      "size_bytes": 1080296
+    }
+  },
+  "pbr": {
+    "base_color_texture": "albedo.png",
+    "double_sided": true,
+    "metallic": 0.0,
+    "roughness": 1.0
+  },
+  "request": {
+    "path": "post_mesh_texture_request.json",
+    "schema_version": "hag4r-post-mesh-texture-request-v1"
+  },
+  "schema_version": "hag4r-post-mesh-texture-visual-v1",
+  "statistics": {
+    "global": {
+      "chart_interior_texel_count": 567039,
+      "gutter_fraction": 0.255006680829763,
+      "gutter_texel_count": 194094,
+      "nearest_filled_fraction": 0.3872008803627264,
+      "nearest_filled_texel_count": 219558,
+      "observed_fraction": 0.6127991196372736,
+      "observed_texel_count": 347481,
+      "part_color_filled_fraction": 0.0,
+      "part_color_filled_texel_count": 0
+    },
+    "per_part": [
+      {
+        "chart_interior_texel_count": 280771,
+        "gutter_fraction": 0.22600164298670725,
+        "gutter_texel_count": 81983,
+        "nearest_filled_fraction": 0.42700278874955033,
+        "nearest_filled_texel_count": 119890,
+        "observed_fraction": 0.5729972112504497,
+        "observed_texel_count": 160881,
+        "part_color_filled_fraction": 0.0,
+        "part_color_filled_texel_count": 0,
+        "part_id": 0
+      },
+      {
+        "chart_interior_texel_count": 286268,
+        "gutter_fraction": 0.28141794622708527,
+        "gutter_texel_count": 112111,
+        "nearest_filled_fraction": 0.3481632596028896,
+        "nearest_filled_texel_count": 99668,
+        "observed_fraction": 0.6518367403971104,
+        "observed_texel_count": 186600,
+        "part_color_filled_fraction": 0.0,
+        "part_color_filled_texel_count": 0,
+        "part_id": 1
+      }
+    ]
+  },
+  "timings_s": {
+    "bake": 33.02689826861024,
+    "boundary": 1.4239424094557762,
+    "fill": 3.3141679987311363,
+    "glb_export": 7.530555050820112,
+    "unwrap": 5.349116377532482
+  }
+}

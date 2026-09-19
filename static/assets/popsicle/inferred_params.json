@@ -1,0 +1,159 @@
+{
+  "schema_version": "hag4r-agentic-gpt-staged-material-inference-v1",
+  "image_path": "/workspace/HAG4R-runpod/outputs/agentic_asset_refinement/ya20_deformable_part2_1_popsicle_yiduo_20260903_050013/revisions/revision_0000/omnipart/popsicle/mesh_combined_part_labels_top.png",
+  "processed_image_path": "/workspace/HAG4R-runpod/outputs/agentic_asset_refinement/ya20_deformable_part2_1_popsicle_yiduo_20260903_050013/revisions/revision_0000/segmentation/popsicle/popsicle_white_bg.png",
+  "part_colors_path": "/workspace/HAG4R-runpod/outputs/agentic_asset_refinement/ya20_deformable_part2_1_popsicle_yiduo_20260903_050013/revisions/revision_0000/omnipart/popsicle/part_labels.npz",
+  "num_parts": 2,
+  "inferred_object_name": "chocolate popsicle",
+  "geometry_inference": {
+    "inferred_object_name": "chocolate popsicle",
+    "predictions": [
+      {
+        "attachment_pattern": "A single smaller post enters centrally through one short end; the body encloses the stick tip at the insertion joint.",
+        "geometric_category": "thick rounded rectangular slab",
+        "geometry_description": "The dominant compact body is a broad elongated rectangular solid with softly rounded perimeter corners, appreciable depth in the front/back views, and no visible cavity or opening.",
+        "part_color_rgb": [
+          141.0,
+          211.0,
+          199.0
+        ],
+        "part_index": 0,
+        "relative_size": "Largest part; it accounts for about 88 percent of visible labeled pixels and forms nearly the full edible bar."
+      },
+      {
+        "attachment_pattern": "Inserted along the main longitudinal axis into the center of one short face of part 0, with a continuous embedded joint and one exposed free end.",
+        "geometric_category": "slender flat rounded-ended post",
+        "geometry_description": "A narrow elongated paddle-like member with a rounded free end and finite rectangular cross-section, visible as a post/strip across five views.",
+        "part_color_rgb": [
+          255.0,
+          255.0,
+          179.0
+        ],
+        "part_index": 1,
+        "relative_size": "Much smaller than part 0; about 12 percent of visible labeled pixels and substantially narrower than the bar body."
+      }
+    ]
+  },
+  "fill_mode_decision": {
+    "schema_version": "hag4r-material-fill-mode-decision-v1",
+    "inferred_object_name": "chocolate popsicle",
+    "predictions": [
+      {
+        "fill_mode_evidence": [
+          "All principal views show a compact, high-fill-ratio rounded slab with appreciable depth.",
+          "No cavity, mouth, rim, wall opening, or shell boundary is visible."
+        ],
+        "fill_mode_rationale": "The edible frozen bar is a thick continuous mass rather than a manufactured shell and should occupy its full closed volume.",
+        "part_color_rgb": [
+          141.0,
+          211.0,
+          199.0
+        ],
+        "part_index": 0,
+        "volume_fill_mode": "solid_fill"
+      },
+      {
+        "fill_mode_evidence": [
+          "The indexed views show a uniformly filled elongated post/strip with a rounded end.",
+          "The member remains compact across orthogonal views and enters the bar as one continuous solid insertion."
+        ],
+        "fill_mode_rationale": "The wooden stick is a solid flat member with a finite cross-section, not a tube or hollow wall.",
+        "part_color_rgb": [
+          255.0,
+          255.0,
+          179.0
+        ],
+        "part_index": 1,
+        "volume_fill_mode": "solid_fill"
+      }
+    ]
+  },
+  "geometry_stage_notes": [
+    "Geometry authored from all six indexed OmniPart views plus the cleaned processed reference; exact index/color lock preserved."
+  ],
+  "fill_mode_stage_notes": [
+    "Both real semantic parts are solid volumes; no carrier or background part exists."
+  ],
+  "semantics_stage_notes": [
+    "Part 0 uses a Genesis-practical compliant frozen-food hypothesis; part 1 copies the wooden_stick profile bank tuple exactly."
+  ],
+  "stage_attempts": {
+    "geometry": [
+      {
+        "attempt_index": 1,
+        "error": "",
+        "stage": "part_geometry",
+        "status": "success"
+      }
+    ],
+    "fill_mode": [
+      {
+        "attempt_index": 1,
+        "error": "",
+        "stage": "fill_mode",
+        "status": "success"
+      }
+    ],
+    "semantics": [
+      {
+        "attempt_index": 1,
+        "error": "",
+        "stage": "constitutive_parameters",
+        "status": "success"
+      }
+    ],
+    "repair": [
+      {
+        "error": "",
+        "stage": "material_validation",
+        "status": "success"
+      }
+    ]
+  },
+  "predictions": [
+    {
+      "density_kg_m3": 950,
+      "friction_coefficient": 0.55,
+      "major_material_name": "frozen chocolate ice cream",
+      "part_color_rgb": [
+        141.0,
+        211.0,
+        199.0
+      ],
+      "part_index": 0,
+      "part_name": "frozen_chocolate_ice_cream_body",
+      "part_semantics": "thick edible frozen chocolate bar body forming the dominant compliant slab around the embedded stick; profile=frozen_food_compliant; tuple density_kg_m3=950, youngs_modulus_pa=5000000, poisson_ratio=0.45, friction_coefficient=0.55",
+      "part_texture": "matte chocolate-brown frozen surface with scattered pale frost crystals and subtle icy roughness",
+      "poisson_ratio": 0.45,
+      "youngs_modulus_pa": 5000000,
+      "volume_fill_mode": "solid_fill",
+      "fill_mode_rationale": "The edible frozen bar is a thick continuous mass rather than a manufactured shell and should occupy its full closed volume.",
+      "fill_mode_evidence": [
+        "All principal views show a compact, high-fill-ratio rounded slab with appreciable depth.",
+        "No cavity, mouth, rim, wall opening, or shell boundary is visible."
+      ]
+    },
+    {
+      "density_kg_m3": 650,
+      "friction_coefficient": 0.45,
+      "major_material_name": "wood",
+      "part_color_rgb": [
+        255.0,
+        255.0,
+        179.0
+      ],
+      "part_index": 1,
+      "part_name": "wooden_stick",
+      "part_semantics": "rigid flat wooden support and handhold inserted centrally into the frozen body; profile=wooden_stick; tuple density_kg_m3=650, youngs_modulus_pa=9000000000, poisson_ratio=0.35, friction_coefficient=0.45",
+      "part_texture": "smooth pale unfinished wood with subtle longitudinal grain",
+      "poisson_ratio": 0.35,
+      "youngs_modulus_pa": 9000000000,
+      "volume_fill_mode": "solid_fill",
+      "fill_mode_rationale": "The wooden stick is a solid flat member with a finite cross-section, not a tube or hollow wall.",
+      "fill_mode_evidence": [
+        "The indexed views show a uniformly filled elongated post/strip with a rounded end.",
+        "The member remains compact across orthogonal views and enters the bar as one continuous solid insertion."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="DiagGen: Agentic Generation of Deformable Assets with Sim-based Diagnostics for Robotic Simulation.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DiagGen: Agentic Generation of Deformable Assets with Sim-based Diagnostics for Robotic Simulation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans:400,500,600,700"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <main>
+    <section class="hero publication-header">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="has-text-centered">
+            <h1 class="title publication-title">
+              DiagGen: Agentic Generation of Deformable Assets with Sim-based Diagnostics for Robotic Simulation
+            </h1>
+
+            <div class="publication-authors is-size-5">
+              <span class="author-block"><a href="https://www.cs.ubc.ca/~gxchen/" target="_blank" rel="noreferrer">Guanxiong Chen</a><sup>1,3,*,†</sup>,</span>
+              <span class="author-block"><a href="https://sg.linkedin.com/in/yiduo-qu-59115321b" target="_blank" rel="noreferrer">Yiduo Qu</a><sup>2,*</sup>,</span>
+              <span class="author-block"><a href="https://qianjun-xia.github.io/" target="_blank" rel="noreferrer">Qianjun Xia</a><sup>1,*</sup>,</span>
+              <span class="author-block"><a href="https://pengyu-jing.github.io/" target="_blank" rel="noreferrer">Pengyu Jing</a><sup>3</sup>,</span>
+              <span class="author-block"><a href="https://ca.linkedin.com/in/yixian-cheng-899b92187" target="_blank" rel="noreferrer">Yixian Cheng</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://de.linkedin.com/in/david-bole-ma" target="_blank" rel="noreferrer">Bole Ma</a><sup>4</sup>,</span>
+              <span class="author-block"><a href="https://pengzhi1998.github.io/" target="_blank" rel="noreferrer">Pengzhi Yang</a><sup>3</sup>,</span>
+              <span class="author-block"><a href="https://sg.linkedin.com/in/bingyang-zhou-69613b292" target="_blank" rel="noreferrer">Bingyang Zhou</a><sup>3</sup>,</span>
+              <span class="author-block"><a href="https://sg.linkedin.com/in/ziming-li-8b68b7280" target="_blank" rel="noreferrer">Ziming Li</a><sup>3</sup>,</span>
+              <span class="author-block"><a href="https://shashwatsuri.github.io/" target="_blank" rel="noreferrer">Shashwat Suri</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://pages.cs.wisc.edu/~gkotse/cs540s26/teaching_team.html" target="_blank" rel="noreferrer">Gongbo Sun</a><sup>5</sup>,</span>
+              <span class="author-block"><a href="https://chaoliu.tech/" target="_blank" rel="noreferrer">Chao Liu</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://peterchencyc.com/" target="_blank" rel="noreferrer">Peter Yichen Chen</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://ziqiu-zeng.github.io/homepage/" target="_blank" rel="noreferrer">Ziqiu Zeng</a><sup>3,+</sup>,</span>
+              <span class="author-block"><a href="https://fanshi14.github.io/me/" target="_blank" rel="noreferrer">Fan Shi</a><sup>3,+</sup></span>
+            </div>
+
+            <div class="publication-notes is-size-6">
+              <span>* Equal technical contribution.</span>
+              <span>† Project lead.</span>
+              <span>+ Corresponding author.</span>
+            </div>
+
+            <div class="publication-institutions is-size-6">
+              <span><sup>1</sup> University of British Columbia, Vancouver, Canada</span>
+              <span><sup>2</sup> University of Cambridge, Cambridge, United Kingdom</span>
+              <span><sup>3</sup> National University of Singapore, Singapore</span>
+              <span><sup>4</sup> NHR@FAU, Friedrich-Alexander-Universität Erlangen-Nürnberg, Germany</span>
+              <span><sup>5</sup> University of Wisconsin–Madison, Madison, WI, USA</span>
+            </div>
+
+            <div class="publication-links">
+              <a href="#" class="button is-dark is-rounded">Paper</a>
+              <a href="#" class="button is-dark is-rounded">Link</a>
+              <a href="#" class="button is-dark is-rounded">Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section video-section" id="video">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Video</h2>
+        <!-- Replace this placeholder with the YouTube embed when the video is ready. -->
+        <div class="video-placeholder" role="img" aria-label="YouTube video placeholder">
+          <span>YouTube video placeholder</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section asset-section" id="interactive-viewer" aria-labelledby="asset-section-title">
+      <div class="container is-max-desktop">
+        <div class="asset-section-heading has-text-centered">
+          <p class="asset-eyebrow">Interactive 3D</p>
+          <h2 class="title is-3" id="asset-section-title">Explore the assets</h2>
+          <p class="asset-section-intro">
+            Take a closer look at six DiagGen assets. Rotate to explore their textured surfaces,
+            tetrahedral mesh boundaries, and part segmentation.
+          </p>
+        </div>
+
+        <div class="asset-tabs" id="asset-tabs" role="tablist" aria-label="Choose an asset">
+          <button class="asset-tab is-active" id="asset-tab-dragon" type="button" role="tab"
+                  aria-selected="true" aria-controls="asset-panel" tabindex="0" data-asset="dragon">Dragon</button>
+          <button class="asset-tab" id="asset-tab-curling-iron" type="button" role="tab"
+                  aria-selected="false" aria-controls="asset-panel" tabindex="-1" data-asset="curling-iron">Curling Iron</button>
+          <button class="asset-tab" id="asset-tab-popsicle" type="button" role="tab"
+                  aria-selected="false" aria-controls="asset-panel" tabindex="-1" data-asset="popsicle">Popsicle</button>
+          <button class="asset-tab" id="asset-tab-toilet-plunger" type="button" role="tab"
+                  aria-selected="false" aria-controls="asset-panel" tabindex="-1" data-asset="toilet-plunger">Toilet Plunger</button>
+          <button class="asset-tab" id="asset-tab-dino" type="button" role="tab"
+                  aria-selected="false" aria-controls="asset-panel" tabindex="-1" data-asset="dino">Dino</button>
+          <button class="asset-tab" id="asset-tab-sneaker" type="button" role="tab"
+                  aria-selected="false" aria-controls="asset-panel" tabindex="-1" data-asset="sneaker">Sneaker</button>
+        </div>
+
+        <div class="asset-viewer" id="asset-panel" role="tabpanel" aria-labelledby="asset-tab-dragon">
+          <div class="asset-stage">
+            <div class="asset-stage-heading">
+              <div>
+                <h3 class="asset-title" id="asset-title">Dragon</h3>
+                <p class="asset-description" id="asset-description">A closer look at the generated asset.</p>
+              </div>
+              <span class="asset-view-badge">3D preview</span>
+            </div>
+            <canvas id="asset-canvas" tabindex="0" aria-label="Interactive 3D asset preview"
+                    aria-describedby="asset-interaction-help">
+              Your browser does not support the canvas needed for this interactive 3D preview.
+            </canvas>
+            <noscript><p class="asset-noscript">Enable JavaScript to explore the 3D assets.</p></noscript>
+          </div>
+          <div class="asset-toolbar">
+            <fieldset class="asset-view-modes">
+              <legend>Display mode</legend>
+              <div class="asset-view-mode-options">
+                <label class="asset-view-mode" for="asset-mode-surface">
+                  <input type="radio" id="asset-mode-surface" name="asset-view-mode" value="surface" checked>
+                  <span>Textured surface</span>
+                </label>
+                <label class="asset-view-mode" for="asset-mode-tets">
+                  <input type="radio" id="asset-mode-tets" name="asset-view-mode" value="tets">
+                  <span>Tet boundary edges</span>
+                </label>
+                <label class="asset-view-mode" for="asset-mode-source" title="Preview the detailed source surface before tetrahedral meshing">
+                  <input type="radio" id="asset-mode-source" name="asset-view-mode" value="source">
+                  <span>Source detail preview</span>
+                </label>
+                <label class="asset-view-mode" for="asset-mode-segmentation">
+                  <input type="radio" id="asset-mode-segmentation" name="asset-view-mode" value="segmentation">
+                  <span>Segmentation map</span>
+                </label>
+              </div>
+            </fieldset>
+            <button class="asset-reset-button" id="asset-reset-camera" type="button">
+              <svg viewBox="0 0 20 20" width="16" height="16" fill="none" aria-hidden="true">
+                <path d="M3.5 8a6.5 6.5 0 1 1 .8 5.2M3.5 3.7V8h4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Reset view
+            </button>
+            <p class="asset-status" id="asset-status" role="status" aria-live="polite" aria-atomic="true">Loading Dragon…</p>
+          </div>
+          <div class="asset-part-legend" id="asset-part-legend" aria-label="Segmentation parts" hidden></div>
+        </div>
+
+        <p class="asset-interaction-help" id="asset-interaction-help">
+          <span>Drag to rotate</span><span>Scroll to zoom</span><span>Right-drag to pan</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section abstract-section" id="abstract">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Abstract</h2>
+        <div class="content abstract-content">
+          <p>
+            While simulation-ready deformable assets are essential for in-silico robotic manipulation tasks, existing generation frameworks typically assess physical plausibility after generation, leaving an object's simulated response unused as feedback for repairing upstream errors. We present DiagGen, an agentic framework that turns a single in-the-wild image into a simulation-ready deformable asset through a generate–simulate–diagnose–refine loop. DiagGen constructs part-aware geometry and material parameters, then uses a VLM (vision-language model)-based agent to select semantically informative regions, probe them in a physics simulator, observe material responses, and route evidence-backed repair cues to the responsible generation stage. Experiments on 40 assets show that diagnostics provides useful repair cues and can moderately improve the quality of generated deformable assets. Finally, we show that unlike assets generated from visual foundation models which may not be simulatable, DiagGen-generated deformables can be directly dropped into a high-fidelity physical simulator for the planning and simulation of contact-rich pick-and-place tasks.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>DiagGen</p>
+    </div>
+  </footer>
+  <script type="module" src="./static/js/asset-viewer.js"></script>
+</body>
+</html>

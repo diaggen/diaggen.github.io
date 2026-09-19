@@ -1,0 +1,107 @@
+[
+  {
+    "id": "dragon",
+    "label": "Dragon",
+    "title": "Dragon · Nailong keychain",
+    "description": "A silicone character with separate connector, ring, and heart-shaped clasp regions. The textured surface is bound to the final tetrahedral mesh.",
+    "glb": "./static/assets/nailong/appearance/visual_mesh.glb",
+    "segmentationGlb": "./static/assets/nailong/appearance/segmentation_mesh.glb",
+    "parts": [
+      { "name": "Silicone character body", "color": "#1D9A90" },
+      { "name": "Connector links", "color": "#D28B16" },
+      { "name": "Keychain ring", "color": "#8060BD" },
+      { "name": "Heart-shaped clasp", "color": "#D85A68" }
+    ],
+    "mesh": "./static/assets/nailong/final_mesh.mesh",
+    "sourceGlb": "./static/assets/nailong/high_detail_source/mesh_combined_textured.glb",
+    "sourceScale": 0.17988305661091475,
+    "params": "./static/assets/nailong/inferred_params.json",
+    "display": { "camera": [0.55, 0.22, 1.0], "zoom": 0.8 }
+  },
+  {
+    "id": "curling-iron",
+    "label": "Curling Iron",
+    "title": "Curling iron",
+    "description": "A three-region model separating the long barrel, handle and clamp, and curled power cable.",
+    "glb": "./static/assets/curling_iron/appearance/visual_mesh.glb",
+    "segmentationGlb": "./static/assets/curling_iron/appearance/segmentation_mesh.glb",
+    "parts": [
+      { "name": "Power cord", "color": "#1D9A90" },
+      { "name": "Handle and clamp lever", "color": "#D28B16" },
+      { "name": "Heated barrel", "color": "#8060BD" }
+    ],
+    "mesh": "./static/assets/curling_iron/final_mesh.mesh",
+    "sourceGlb": "./static/assets/curling_iron/high_detail_source/mesh_combined_textured.glb",
+    "sourceScale": 0.24980368247309875,
+    "params": "./static/assets/curling_iron/inferred_params.json",
+    "display": { "camera": [0.65, 1.4, 1.0] }
+  },
+  {
+    "id": "popsicle",
+    "label": "Popsicle",
+    "title": "Chocolate popsicle",
+    "description": "The coated ice-cream body and wooden stick form two inferred material regions over one tetrahedral volume.",
+    "glb": "./static/assets/popsicle/appearance/visual_mesh.glb",
+    "segmentationGlb": "./static/assets/popsicle/appearance/segmentation_mesh.glb",
+    "parts": [
+      { "name": "Chocolate ice-cream body", "color": "#1D9A90" },
+      { "name": "Wooden stick", "color": "#D28B16" }
+    ],
+    "mesh": "./static/assets/popsicle/final_mesh.mesh",
+    "sourceGlb": "./static/assets/popsicle/high_detail_source/mesh_combined_textured.glb",
+    "sourceScale": 0.1401924581943233,
+    "params": "./static/assets/popsicle/inferred_params.json",
+    "display": { "camera": [0.8, 1.3, 1.0] }
+  },
+  {
+    "id": "toilet-plunger",
+    "label": "Toilet Plunger",
+    "title": "Toilet plunger",
+    "description": "The long handle and hollow rubber cup are represented as two distinct inferred regions.",
+    "glb": "./static/assets/toilet_plunger/appearance/visual_mesh.glb",
+    "segmentationGlb": "./static/assets/toilet_plunger/appearance/segmentation_mesh.glb",
+    "parts": [
+      { "name": "Rubber suction cup", "color": "#1D9A90" },
+      { "name": "Wooden handle", "color": "#D28B16" }
+    ],
+    "mesh": "./static/assets/toilet_plunger/final_mesh.mesh",
+    "sourceGlb": "./static/assets/toilet_plunger/high_detail_source/mesh_combined_textured.glb",
+    "sourceScale": 0.40050692346810374,
+    "params": "./static/assets/toilet_plunger/inferred_params.json",
+    "display": { "rotationDeg": [0, 0, -90], "camera": [1.0, 0.35, 1.0], "zoom": 0.85 }
+  },
+  {
+    "id": "dino",
+    "label": "Dino",
+    "title": "Dinosaur toy",
+    "description": "An upright molded body with small accent patches, preserving a simple two-region material split.",
+    "glb": "./static/assets/dino/appearance/visual_mesh.glb",
+    "segmentationGlb": "./static/assets/dino/appearance/segmentation_mesh.glb",
+    "parts": [
+      { "name": "Dinosaur body", "color": "#1D9A90" },
+      { "name": "Head and snout accents", "color": "#D28B16" }
+    ],
+    "mesh": "./static/assets/dino/final_mesh.mesh",
+    "sourceGlb": "./static/assets/dino/high_detail_source/mesh_combined_textured.glb",
+    "sourceScale": 0.1800965737596648,
+    "params": "./static/assets/dino/inferred_params.json",
+    "display": { "camera": [1.0, 0.42, 0.85] }
+  },
+  {
+    "id": "sneaker",
+    "label": "Sneaker",
+    "title": "Athletic sneaker",
+    "description": "A two-region upper and sole segmentation on a textured, tetrahedralized shoe.",
+    "glb": "./static/assets/sneaker/appearance/visual_mesh.glb",
+    "segmentationGlb": "./static/assets/sneaker/appearance/segmentation_mesh.glb",
+    "parts": [
+      { "name": "Rubber outsole", "color": "#1D9A90" },
+      { "name": "Textile upper", "color": "#D28B16" }
+    ],
+    "mesh": "./static/assets/sneaker/final_mesh.mesh",
+    "sourceGlb": "./static/assets/sneaker/high_detail_source/mesh_combined_textured.glb",
+    "sourceScale": 0.2805568338472762,
+    "params": "./static/assets/sneaker/inferred_params.json",
+    "display": { "camera": [1.0, 0.6, 1.0] }
+  }
+]

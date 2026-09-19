@@ -1,0 +1,161 @@
+{
+  "schema_version": "hag4r-agentic-gpt-staged-material-inference-v1",
+  "image_path": "/workspace/HAG4R-runpod/outputs/agentic_asset_refinement/ya20_diagno_and_reroute_Part2_6_sneaker_yiduo_20260905_100342/revisions/revision_0001/omnipart/sneaker/mesh_combined_part_labels_top.png",
+  "processed_image_path": "/workspace/HAG4R-runpod/outputs/agentic_asset_refinement/ya20_diagno_and_reroute_Part2_6_sneaker_yiduo_20260905_100342/revisions/revision_0001/segmentation/sneaker/sneaker_white_bg.png",
+  "part_colors_path": "/workspace/HAG4R-runpod/outputs/agentic_asset_refinement/ya20_diagno_and_reroute_Part2_6_sneaker_yiduo_20260905_100342/revisions/revision_0001/omnipart/sneaker/part_labels.npz",
+  "num_parts": 2,
+  "inferred_object_name": "beige athletic sneaker",
+  "geometry_inference": {
+    "inferred_object_name": "beige athletic sneaker",
+    "predictions": [
+      {
+        "attachment_pattern": "flush continuous attachment along the lower perimeter beneath the raised shoe region",
+        "geometric_category": "low-profile elongated base slab",
+        "geometry_description": "Broad continuous footprint-following panel with rounded front and rear ends, large bottom-view area, and thin side bands; it forms the lowest support/contact layer.",
+        "part_color_rgb": [
+          141.0,
+          211.0,
+          199.0
+        ],
+        "part_index": 0,
+        "relative_size": "large footprint-support region with much less vertical thickness than length and width"
+      },
+      {
+        "attachment_pattern": "continuously mounted above and around the base panel along the shoe perimeter and collar",
+        "geometric_category": "raised curved upper shell",
+        "geometry_description": "Tall longitudinally curved enclosure spanning the upper shoe profile, with broad top/front/back projections and thin irregular side patches around the opening.",
+        "part_color_rgb": [
+          255.0,
+          255.0,
+          179.0
+        ],
+        "part_index": 1,
+        "relative_size": "large upper enclosure with greater height than the base panel and broad longitudinal extent"
+      }
+    ]
+  },
+  "fill_mode_decision": {
+    "schema_version": "hag4r-material-fill-mode-decision-v1",
+    "inferred_object_name": "beige athletic sneaker",
+    "predictions": [
+      {
+        "fill_mode_evidence": [
+          "Large broad panel in the bottom view with continuous front/back bands.",
+          "Its compact base geometry should retain the load-bearing footprint when filled volumetrically."
+        ],
+        "fill_mode_rationale": "The broad low-profile panel is a continuous support and ground-contact volume rather than a shell around an empty cavity.",
+        "part_color_rgb": [
+          141.0,
+          211.0,
+          199.0
+        ],
+        "part_index": 0,
+        "volume_fill_mode": "solid_fill"
+      },
+      {
+        "fill_mode_evidence": [
+          "Tall curved profile and thin irregular side patches across the indexed views.",
+          "The upper wraps above the base and visibly bounds an open/inset interior rather than forming a uniform block."
+        ],
+        "fill_mode_rationale": "The raised curved enclosure is a sheet-like shoe upper around an open collar, so a hollow wall preserves the shell contour and interior opening.",
+        "part_color_rgb": [
+          255.0,
+          255.0,
+          179.0
+        ],
+        "part_index": 1,
+        "volume_fill_mode": "hollow_wall"
+      }
+    ]
+  },
+  "geometry_stage_notes": [
+    "Used the exact two-part regenerated index/color mapping; geometry claims are limited to the six indexed views.",
+    "The segmentation repair cue was used only to interpret the regenerated part boundaries."
+  ],
+  "fill_mode_stage_notes": [
+    "Selected topology from the just-recorded geometry evidence; no material or numeric claims were made."
+  ],
+  "semantics_stage_notes": [
+    "Authored one complete physical hypothesis per exact indexed part using the practical profile bank.",
+    "The segmentation repair cue was consumed as context; no extra unindexed trim entry was added."
+  ],
+  "stage_attempts": {
+    "geometry": [
+      {
+        "attempt_index": 1,
+        "error": "",
+        "stage": "part_geometry",
+        "status": "success"
+      }
+    ],
+    "fill_mode": [
+      {
+        "attempt_index": 1,
+        "error": "",
+        "stage": "fill_mode",
+        "status": "success"
+      }
+    ],
+    "semantics": [
+      {
+        "attempt_index": 1,
+        "error": "",
+        "stage": "constitutive_parameters",
+        "status": "success"
+      }
+    ],
+    "repair": [
+      {
+        "error": "",
+        "stage": "material_validation",
+        "status": "success"
+      }
+    ]
+  },
+  "predictions": [
+    {
+      "density_kg_m3": 1100,
+      "friction_coefficient": 0.9,
+      "major_material_name": "rubber",
+      "part_color_rgb": [
+        141.0,
+        211.0,
+        199.0
+      ],
+      "part_index": 0,
+      "part_name": "rubber_outsole_base",
+      "part_semantics": "broad low-profile sneaker sole and ground-contact support volume; profile=rubber_flexible; tuple density_kg_m3=1100, youngs_modulus_pa=5000000, poisson_ratio=0.49, friction_coefficient=0.9",
+      "part_texture": "matte tan-brown molded rubber with a rounded perimeter and subtle tread relief",
+      "poisson_ratio": 0.49,
+      "youngs_modulus_pa": 5000000,
+      "volume_fill_mode": "solid_fill",
+      "fill_mode_rationale": "The broad low-profile panel is a continuous support and ground-contact volume rather than a shell around an empty cavity.",
+      "fill_mode_evidence": [
+        "Large broad panel in the bottom view with continuous front/back bands.",
+        "Its compact base geometry should retain the load-bearing footprint when filled volumetrically."
+      ]
+    },
+    {
+      "density_kg_m3": 1050,
+      "friction_coefficient": 0.35,
+      "major_material_name": "synthetic textile",
+      "part_color_rgb": [
+        255.0,
+        255.0,
+        179.0
+      ],
+      "part_index": 1,
+      "part_name": "synthetic_textile_upper_shell",
+      "part_semantics": "raised athletic sneaker upper enclosure with mesh, padded collar, tongue, and attached overlay contours; profile=thin_plastic_sheet; tuple density_kg_m3=1050, youngs_modulus_pa=2000000000, poisson_ratio=0.38, friction_coefficient=0.35",
+      "part_texture": "beige breathable mesh and synthetic overlays with stitched seams, padded collar, and a small reflective accent",
+      "poisson_ratio": 0.38,
+      "youngs_modulus_pa": 2000000000,
+      "volume_fill_mode": "hollow_wall",
+      "fill_mode_rationale": "The raised curved enclosure is a sheet-like shoe upper around an open collar, so a hollow wall preserves the shell contour and interior opening.",
+      "fill_mode_evidence": [
+        "Tall curved profile and thin irregular side patches across the indexed views.",
+        "The upper wraps above the base and visibly bounds an open/inset interior rather than forming a uniform block."
+      ]
+    }
+  ]
+}

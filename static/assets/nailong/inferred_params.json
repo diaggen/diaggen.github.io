@@ -1,0 +1,255 @@
+{
+  "schema_version": "hag4r-agentic-gpt-staged-material-inference-v1",
+  "image_path": "/workspace/HAG4R-runpod/outputs/agentic_asset_refinement/nailoong_retry_20260911_01/nailoong_retry_20260911_01/revisions/revision_0000/omnipart/silicone_nailoong/mesh_combined_part_labels_top.png",
+  "processed_image_path": "/workspace/HAG4R-runpod/outputs/agentic_asset_refinement/nailoong_retry_20260911_01/nailoong_retry_20260911_01/revisions/revision_0000/segmentation/silicone_nailoong/silicone_nailoong_white_bg.png",
+  "part_colors_path": "/workspace/HAG4R-runpod/outputs/agentic_asset_refinement/nailoong_retry_20260911_01/nailoong_retry_20260911_01/revisions/revision_0000/omnipart/silicone_nailoong/part_labels.npz",
+  "num_parts": 4,
+  "inferred_object_name": "silicone nailoong cartoon keychain figure",
+  "geometry_inference": {
+    "inferred_object_name": "silicone nailoong cartoon keychain figure",
+    "predictions": [
+      {
+        "attachment_pattern": "Primary object mass; the upper hardware attaches at the superior center while the head, torso, arms, feet, and tail remain part of one continuous character region.",
+        "geometric_category": "dominant rounded character body with appendages",
+        "geometry_description": "Large compact rounded character mass spanning the head and torso, with bilateral short arm forms, two lower foot lobes, and a small lateral tail/appendage visible across the indexed views; the facial and belly reliefs are carried on this primary mass.",
+        "part_color_rgb": [
+          141.0,
+          211.0,
+          199.0
+        ],
+        "part_index": 0,
+        "relative_size": "dominant"
+      },
+      {
+        "attachment_pattern": "Intermediate connector between the top of the character mass and the surrounding ring/clasp hardware; it contacts or nests with the neighboring hardware regions.",
+        "geometric_category": "small elongated connector/link cluster",
+        "geometry_description": "Small narrow irregular link-like geometry positioned directly above the character, with elongated members and visible gaps in the front, back, side, and top views.",
+        "part_color_rgb": [
+          255.0,
+          255.0,
+          179.0
+        ],
+        "part_index": 1,
+        "relative_size": "small"
+      },
+      {
+        "attachment_pattern": "Lateral upper hardware element attached at its inner-side junction to the connector/clasp assembly; its central aperture remains open.",
+        "geometric_category": "large open circular loop",
+        "geometry_description": "Medium-to-large curved loop with a clearly enclosed central opening and a rounded tubular-looking perimeter, positioned to one side of the upper connector assembly and visible from the axial and top views.",
+        "part_color_rgb": [
+          190.0,
+          186.0,
+          218.0
+        ],
+        "part_index": 2,
+        "relative_size": "medium"
+      },
+      {
+        "attachment_pattern": "Uppermost clasp frame linked through its lower junction to the connector and neighboring ring hardware, with the heart-shaped opening retained.",
+        "geometric_category": "heart-shaped open clasp",
+        "geometry_description": "Medium curved heart-shaped frame above the connector, with a distinct interior opening and rounded perimeter members; the silhouette and aperture persist across the front, back, side, and top views.",
+        "part_color_rgb": [
+          251.0,
+          128.0,
+          114.0
+        ],
+        "part_index": 3,
+        "relative_size": "medium"
+      }
+    ]
+  },
+  "fill_mode_decision": {
+    "schema_version": "hag4r-material-fill-mode-decision-v1",
+    "inferred_object_name": "silicone nailoong cartoon keychain figure",
+    "predictions": [
+      {
+        "fill_mode_evidence": [
+          "Broad filled-looking head and torso silhouette in front, back, left, right, top, and bottom views",
+          "Lower appendages and facial/belly-bearing surfaces are part of a continuous compact body region rather than a frame"
+        ],
+        "fill_mode_rationale": "The dominant character region is a compact rounded mass across the six indexed views, including the head, torso, arms, feet, and tail, without a persistent through-opening.",
+        "part_color_rgb": [
+          141.0,
+          211.0,
+          199.0
+        ],
+        "part_index": 0,
+        "volume_fill_mode": "solid_fill"
+      },
+      {
+        "fill_mode_evidence": [
+          "Narrow elongated members with gaps are visible in front, back, left, right, and top views",
+          "Connector sits between the character and larger open hardware rather than forming a compact solid mass"
+        ],
+        "fill_mode_rationale": "The small connector is link-like and has visible gaps between its narrow members, so a hollow wall preserves the functional link openings.",
+        "part_color_rgb": [
+          255.0,
+          255.0,
+          179.0
+        ],
+        "part_index": 1,
+        "volume_fill_mode": "hollow_wall"
+      },
+      {
+        "fill_mode_evidence": [
+          "Clearly enclosed central opening is visible in the axial and top indexed views",
+          "Curved perimeter is a loop/frame shape rather than an occupied compact volume"
+        ],
+        "fill_mode_rationale": "The large circular hardware element has a persistent enclosed central aperture and a frame-like perimeter, requiring hollow-wall topology to retain the opening.",
+        "part_color_rgb": [
+          190.0,
+          186.0,
+          218.0
+        ],
+        "part_index": 2,
+        "volume_fill_mode": "hollow_wall"
+      },
+      {
+        "fill_mode_evidence": [
+          "Heart-shaped interior opening remains visible in front, back, side, and top views",
+          "Perimeter members are narrow and frame-like, with no evidence of a filled central mass"
+        ],
+        "fill_mode_rationale": "The heart-shaped clasp is an open frame with a stable interior cavity across views; hollow-wall topology best preserves its recognizable clasp silhouette and opening.",
+        "part_color_rgb": [
+          251.0,
+          128.0,
+          114.0
+        ],
+        "part_index": 3,
+        "volume_fill_mode": "hollow_wall"
+      }
+    ]
+  },
+  "geometry_stage_notes": [
+    "Geometry authored from the six indexed OmniPart views and the processed upright reference; descriptions are limited to shape, size, placement, and attachment."
+  ],
+  "fill_mode_stage_notes": [
+    "Topology decisions use only indexed geometry evidence; body is filled and all three open/link hardware regions retain hollow-wall topology."
+  ],
+  "semantics_stage_notes": [
+    "Material candidates preserve the accepted Nailoong identity: one soft silicone/rubber character region and three rigid keychain hardware regions, using the recovered practical profile tuples."
+  ],
+  "stage_attempts": {
+    "geometry": [
+      {
+        "attempt_index": 1,
+        "error": "",
+        "stage": "part_geometry",
+        "status": "success"
+      }
+    ],
+    "fill_mode": [
+      {
+        "attempt_index": 1,
+        "error": "",
+        "stage": "fill_mode",
+        "status": "success"
+      }
+    ],
+    "semantics": [
+      {
+        "attempt_index": 1,
+        "error": "",
+        "stage": "constitutive_parameters",
+        "status": "success"
+      }
+    ],
+    "repair": [
+      {
+        "error": "",
+        "stage": "material_validation",
+        "status": "success"
+      }
+    ]
+  },
+  "predictions": [
+    {
+      "density_kg_m3": 1100,
+      "friction_coefficient": 0.9,
+      "major_material_name": "silicone rubber",
+      "part_color_rgb": [
+        141.0,
+        211.0,
+        199.0
+      ],
+      "part_index": 0,
+      "part_name": "nailoong_silicone_character_body",
+      "part_semantics": "Continuous rounded Nailoong character body carrying the head, expressive face, belly marking, short arms, feet, and tail; soft molded elastomer for the toy figure; profile=rubber_flexible; tuple density_kg_m3=1100, youngs_modulus_pa=5000000, poisson_ratio=0.49, friction_coefficient=0.9",
+      "part_texture": "soft matte yellow silicone with smooth molded shading, white eye discs with pink heart centers, and a pale cream belly marking",
+      "poisson_ratio": 0.49,
+      "youngs_modulus_pa": 5000000,
+      "volume_fill_mode": "solid_fill",
+      "fill_mode_rationale": "The dominant character region is a compact rounded mass across the six indexed views, including the head, torso, arms, feet, and tail, without a persistent through-opening.",
+      "fill_mode_evidence": [
+        "Broad filled-looking head and torso silhouette in front, back, left, right, top, and bottom views",
+        "Lower appendages and facial/belly-bearing surfaces are part of a continuous compact body region rather than a frame"
+      ]
+    },
+    {
+      "density_kg_m3": 1100,
+      "friction_coefficient": 0.35,
+      "major_material_name": "rigid plastic",
+      "part_color_rgb": [
+        255.0,
+        255.0,
+        179.0
+      ],
+      "part_index": 1,
+      "part_name": "keychain_connector_links",
+      "part_semantics": "Small rigid connector/link cluster joining the character to the upper keychain hardware; preserve its narrow members and functional gaps; profile=rigid_plastic_hub; tuple density_kg_m3=1100, youngs_modulus_pa=2200000000, poisson_ratio=0.37, friction_coefficient=0.35",
+      "part_texture": "smooth glossy golden-yellow rigid hardware with rounded molded link highlights",
+      "poisson_ratio": 0.37,
+      "youngs_modulus_pa": 2200000000,
+      "volume_fill_mode": "hollow_wall",
+      "fill_mode_rationale": "The small connector is link-like and has visible gaps between its narrow members, so a hollow wall preserves the functional link openings.",
+      "fill_mode_evidence": [
+        "Narrow elongated members with gaps are visible in front, back, left, right, and top views",
+        "Connector sits between the character and larger open hardware rather than forming a compact solid mass"
+      ]
+    },
+    {
+      "density_kg_m3": 1100,
+      "friction_coefficient": 0.35,
+      "major_material_name": "rigid plastic",
+      "part_color_rgb": [
+        190.0,
+        186.0,
+        218.0
+      ],
+      "part_index": 2,
+      "part_name": "large_keychain_ring",
+      "part_semantics": "Large rigid circular keychain ring with a continuous curved perimeter and open central aperture; functional upper hardware surrounding the connector; profile=rigid_plastic_hub; tuple density_kg_m3=1100, youngs_modulus_pa=2200000000, poisson_ratio=0.37, friction_coefficient=0.35",
+      "part_texture": "smooth glossy golden-yellow rigid plastic ring with rounded tubular highlights",
+      "poisson_ratio": 0.37,
+      "youngs_modulus_pa": 2200000000,
+      "volume_fill_mode": "hollow_wall",
+      "fill_mode_rationale": "The large circular hardware element has a persistent enclosed central aperture and a frame-like perimeter, requiring hollow-wall topology to retain the opening.",
+      "fill_mode_evidence": [
+        "Clearly enclosed central opening is visible in the axial and top indexed views",
+        "Curved perimeter is a loop/frame shape rather than an occupied compact volume"
+      ]
+    },
+    {
+      "density_kg_m3": 1100,
+      "friction_coefficient": 0.35,
+      "major_material_name": "rigid plastic",
+      "part_color_rgb": [
+        251.0,
+        128.0,
+        114.0
+      ],
+      "part_index": 3,
+      "part_name": "heart_shaped_keychain_clasp",
+      "part_semantics": "Rigid heart-shaped clasp frame with a preserved interior opening, attached above the connector as part of the functional keychain assembly; profile=rigid_plastic_hub; tuple density_kg_m3=1100, youngs_modulus_pa=2200000000, poisson_ratio=0.37, friction_coefficient=0.35",
+      "part_texture": "smooth glossy golden-yellow rigid plastic clasp with rounded molded edges",
+      "poisson_ratio": 0.37,
+      "youngs_modulus_pa": 2200000000,
+      "volume_fill_mode": "hollow_wall",
+      "fill_mode_rationale": "The heart-shaped clasp is an open frame with a stable interior cavity across views; hollow-wall topology best preserves its recognizable clasp silhouette and opening.",
+      "fill_mode_evidence": [
+        "Heart-shaped interior opening remains visible in front, back, side, and top views",
+        "Perimeter members are narrow and frame-like, with no evidence of a filled central mass"
+      ]
+    }
+  ]
+}

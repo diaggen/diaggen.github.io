@@ -1,0 +1,195 @@
+{
+  "schema_version": "hag4r-agentic-gpt-staged-material-inference-v1",
+  "image_path": "/media/eric/data/HAG4R/outputs/agentic_asset_refinement/pr10_boolean_rerun_20260731_curling_iron_v2/pr10_boolean_rerun_20260731_curling_iron_v2/revisions/revision_0000/omnipart/curling_iron/mesh_combined_part_labels_top.png",
+  "processed_image_path": "/media/eric/data/HAG4R/outputs/agentic_asset_refinement/pr10_boolean_rerun_20260731_curling_iron_v2/pr10_boolean_rerun_20260731_curling_iron_v2/revisions/revision_0000/segmentation/curling_iron/curling_iron_white_bg.png",
+  "part_colors_path": "/media/eric/data/HAG4R/outputs/agentic_asset_refinement/pr10_boolean_rerun_20260731_curling_iron_v2/pr10_boolean_rerun_20260731_curling_iron_v2/revisions/revision_0000/omnipart/curling_iron/part_labels.npz",
+  "num_parts": 3,
+  "inferred_object_name": "pink and white corded curling iron",
+  "geometry_inference": {
+    "inferred_object_name": "pink and white corded curling iron",
+    "predictions": [
+      {
+        "attachment_pattern": "The cable exits the rear of the handle through a strain-relief joint and terminates at a plug; the other small pieces adjoin the barrel and clamp assembly.",
+        "geometric_category": "coiled flexible cable with small tip and lower support segments",
+        "geometry_description": "Largest in top view because it contains the looped power cable and plug; it also covers thin lower-side and conical end pieces around the tool.",
+        "part_color_rgb": [
+          141.0,
+          211.0,
+          199.0
+        ],
+        "part_index": 0,
+        "relative_size": "medium overall with long thin loops"
+      },
+      {
+        "attachment_pattern": "Connects rear cable strain relief to the barrel collar; the curved lever pivots at the barrel-handle junction.",
+        "geometric_category": "tapered handle housing with curved clamp lever",
+        "geometry_description": "Long central housing with a broader rear grip, collar at the barrel junction, an underside slider region, and a curved lever projecting below the junction.",
+        "part_color_rgb": [
+          255.0,
+          255.0,
+          179.0
+        ],
+        "part_index": 1,
+        "relative_size": "largest rigid structural part"
+      },
+      {
+        "attachment_pattern": "Rigidly coupled to the handle collar and adjacent to the hinged clamp lever; terminates at the cool-touch end.",
+        "geometric_category": "long cylindrical clamping barrel",
+        "geometry_description": "Long narrow right-side barrel section with rounded ends and a continuous longitudinal clamp seam, visibly distinct from the handle.",
+        "part_color_rgb": [
+          190.0,
+          186.0,
+          218.0
+        ],
+        "part_index": 2,
+        "relative_size": "medium-long"
+      }
+    ]
+  },
+  "fill_mode_decision": {
+    "schema_version": "hag4r-material-fill-mode-decision-v1",
+    "inferred_object_name": "pink and white corded curling iron",
+    "predictions": [
+      {
+        "fill_mode_evidence": [
+          "The cable has a continuous round cross-section and the plug/end pieces appear compact and volumetric."
+        ],
+        "fill_mode_rationale": "The cable, plug, and associated small end pieces are solid-bodied conductors and polymer overmolds rather than sealed hollow enclosures.",
+        "part_color_rgb": [
+          141.0,
+          211.0,
+          199.0
+        ],
+        "part_index": 0,
+        "volume_fill_mode": "solid_fill"
+      },
+      {
+        "fill_mode_evidence": [
+          "The part is a broad compact housing with a thick curved lever and no visible interior cavity."
+        ],
+        "fill_mode_rationale": "The tapered grip, collar, and hinged lever are molded structural pieces that need filled volume for their rigid body and joint-support role.",
+        "part_color_rgb": [
+          255.0,
+          255.0,
+          179.0
+        ],
+        "part_index": 1,
+        "volume_fill_mode": "solid_fill"
+      },
+      {
+        "fill_mode_evidence": [
+          "Its long rounded body has a substantial cross-section and a clamp seam, but no exposed hollow interior."
+        ],
+        "fill_mode_rationale": "The clamping barrel is represented as a thick continuous cylindrical tool component rather than a visibly thin closed shell.",
+        "part_color_rgb": [
+          190.0,
+          186.0,
+          218.0
+        ],
+        "part_index": 2,
+        "volume_fill_mode": "solid_fill"
+      }
+    ]
+  },
+  "geometry_stage_notes": [],
+  "fill_mode_stage_notes": [],
+  "semantics_stage_notes": [],
+  "stage_attempts": {
+    "geometry": [
+      {
+        "attempt_index": 1,
+        "error": "",
+        "stage": "part_geometry",
+        "status": "success"
+      }
+    ],
+    "fill_mode": [
+      {
+        "attempt_index": 1,
+        "error": "",
+        "stage": "fill_mode",
+        "status": "success"
+      }
+    ],
+    "semantics": [
+      {
+        "attempt_index": 1,
+        "error": "",
+        "stage": "constitutive_parameters",
+        "status": "success"
+      }
+    ],
+    "repair": [
+      {
+        "error": "",
+        "stage": "material_validation",
+        "status": "success"
+      }
+    ]
+  },
+  "predictions": [
+    {
+      "density_kg_m3": 1100,
+      "friction_coefficient": 0.9,
+      "major_material_name": "flexible PVC electrical-cable insulation",
+      "part_color_rgb": [
+        141.0,
+        211.0,
+        199.0
+      ],
+      "part_index": 0,
+      "part_name": "flexible_power_cord_and_plug_overmold",
+      "part_semantics": "Flexible insulated power lead with a coiled cable and molded plug/end overmolds; profile=rubber_flexible; tuple density_kg_m3=1100, youngs_modulus_pa=5000000, poisson_ratio=0.49, friction_coefficient=0.9",
+      "part_texture": "smooth white flexible PVC or rubber insulation with ribbed strain relief and small molded plug",
+      "poisson_ratio": 0.49,
+      "youngs_modulus_pa": 5000000,
+      "volume_fill_mode": "solid_fill",
+      "fill_mode_rationale": "The cable, plug, and associated small end pieces are solid-bodied conductors and polymer overmolds rather than sealed hollow enclosures.",
+      "fill_mode_evidence": [
+        "The cable has a continuous round cross-section and the plug/end pieces appear compact and volumetric."
+      ]
+    },
+    {
+      "density_kg_m3": 1100,
+      "friction_coefficient": 0.35,
+      "major_material_name": "rigid thermoplastic",
+      "part_color_rgb": [
+        255.0,
+        255.0,
+        179.0
+      ],
+      "part_index": 1,
+      "part_name": "molded_handle_housing_and_clamp_lever",
+      "part_semantics": "Rigid molded handle, barrel collar, and hinged clamp lever that provide the curling iron structural grip and pivot support; profile=rigid_plastic_hub; tuple density_kg_m3=1100, youngs_modulus_pa=2200000000, poisson_ratio=0.37, friction_coefficient=0.35",
+      "part_texture": "smooth off-white injection-molded thermoplastic with a small molded slider and rounded edges",
+      "poisson_ratio": 0.37,
+      "youngs_modulus_pa": 2200000000,
+      "volume_fill_mode": "solid_fill",
+      "fill_mode_rationale": "The tapered grip, collar, and hinged lever are molded structural pieces that need filled volume for their rigid body and joint-support role.",
+      "fill_mode_evidence": [
+        "The part is a broad compact housing with a thick curved lever and no visible interior cavity."
+      ]
+    },
+    {
+      "density_kg_m3": 7850,
+      "friction_coefficient": 0.4,
+      "major_material_name": "ceramic-coated steel heating barrel",
+      "part_color_rgb": [
+        190.0,
+        186.0,
+        218.0
+      ],
+      "part_index": 2,
+      "part_name": "pink_heated_clamping_barrel",
+      "part_semantics": "Stiff heated cylindrical barrel and clamping surface that transfers heat to hair while maintaining its long seam-aligned form; profile=metal_connector; tuple density_kg_m3=7850, youngs_modulus_pa=200000000000, poisson_ratio=0.3, friction_coefficient=0.4",
+      "part_texture": "smooth glossy pink ceramic-coated metal with a longitudinal clamp seam and small vent holes",
+      "poisson_ratio": 0.3,
+      "youngs_modulus_pa": 200000000000,
+      "volume_fill_mode": "solid_fill",
+      "fill_mode_rationale": "The clamping barrel is represented as a thick continuous cylindrical tool component rather than a visibly thin closed shell.",
+      "fill_mode_evidence": [
+        "Its long rounded body has a substantial cross-section and a clamp seam, but no exposed hollow interior."
+      ]
+    }
+  ]
+}
