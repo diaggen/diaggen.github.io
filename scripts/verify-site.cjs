@@ -54,7 +54,8 @@ fs.mkdirSync(outputDir, { recursive: true });
         + parseFloat(getComputedStyle(section).scrollMarginTop);
       return location.hash === '#' + id
         && document.querySelector(`.section-nav a[href="#${id}"]`).getAttribute('aria-current') === 'location'
-        && Math.abs(nav.getBoundingClientRect().top) < 1
+        && nav.classList.contains('is-stuck')
+        && Math.abs(nav.getBoundingClientRect().top - parseFloat(getComputedStyle(nav).top)) < 1
         && Math.abs(section.getBoundingClientRect().top - offset) < 2;
     }, id);
     assert.ok(await page.locator('#' + id + ' .chapter-heading').evaluate(heading =>

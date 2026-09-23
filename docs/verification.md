@@ -19,6 +19,8 @@ A previous targeted autoplay check confirmed that a simulated rejection exposes 
 
 The sticky navigation also passed the warm-cache regression. The three contribution paragraphs use a tighter 1.6 line height; section divider and Method block spacing remain unchanged. Desktop and phone renders of the sticky bar and phone contribution text were visually reviewed.
 
+The floating navigation revision passed all 19 browser checks and four cache checks. Its sticky state uses rounded corners, a pale-green background, a soft shadow and a rounded active-section highlight; its initial placement below the publication links retains the quieter styling. Section jumps include the new 10px top gap. Desktop and phone renders were visually reviewed.
+
 The preview server supports byte-range requests; browser seeking was checked against that server. Browser verification used Chrome 153 on macOS. Safari, Firefox and physical mobile devices have not been tested.
 
 ## Navigation deployment regression
