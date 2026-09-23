@@ -6,13 +6,15 @@ This website is adapted from the [Nerfies website template](https://github.com/n
 
 ## Preview locally
 
-The site is plain HTML, CSS and JavaScript; no build step is required. Serve it over HTTP so the interactive viewer can fetch assets. Use the included preview server to support byte-range requests and seeking in the original videos:
+The published site is plain HTML, CSS and JavaScript, with generated assets checked in. Serve it over HTTP so the interactive viewer can fetch assets. Use the included preview server to support byte-range requests and seeking in the original videos:
 
 ```bash
 python3 scripts/serve.py --port 8000
 ```
 
 Then open <http://localhost:8000/> in a browser.
+
+After editing `static/css/site.css` or `static/js/site.js`, run `python3 scripts/version-site-assets.py` and commit the updated HTML plus the generated files. The page uses filenames containing content hashes so a new HTML document cannot reuse an incompatible cached CSS or JavaScript version. Keep older generated files available for visitors with cached HTML. `python3 scripts/version-site-assets.py --check` verifies that the generated assets match their sources; the browser suite runs this check automatically.
 
 ## Media and behavior
 
@@ -21,7 +23,7 @@ Then open <http://localhost:8000/> in a browser.
 - All videos start muted and play at 1×. The full film uses the same native player and keeps a link to YouTube. Native media avoids a separate third-party autoplay dependency.
 - Plush, Dino and Bottle share a single side-by-side video player with native controls. Plush uses the archive's full real camera clip and matching woven-basket simulation (both 282 frames at 30 fps). The USB hub repair comparison retains its existing synchronized controls.
 - The existing Three.js viewer loads near the gallery and suspends its render loop offscreen. Display modes, camera controls, source detail and part segmentation are preserved.
-- The desktop progress rail becomes horizontal navigation on smaller screens. Reduced-motion preferences disable decorative transitions and smooth scrolling, while videos retain visible playback controls.
+- A horizontal section navigation bar sits below the Paper / arXiv / Code buttons, highlights the current section and wraps into rows on smaller screens. Reduced-motion preferences disable decorative transitions and smooth scrolling, while videos retain visible playback controls.
 
 See [media provenance](docs/media-provenance.md) for source selections, inset timing and result definitions. The simulation insets and Plush comparison can be rebuilt with `scripts/compose-simulation.py` and `scripts/compose-plush.py`. Apply the final delivery step with `scripts/add-end-holds.py` from a preserved baseline directory containing the pre-hold MP4s and manifest. The scripts’ `--help` output lists source and destination arguments; the hold script rejects already-padded baselines to prevent stacking holds.
 
@@ -42,6 +44,8 @@ SITE_URL=http://127.0.0.1:8000 node scripts/verify-site.cjs
 Set `CHROME_EXECUTABLE` to use an existing Chrome binary, and `SITE_QA_DIR` to place reports and page screenshots outside the default ignored `.qa/` directory. The checks launch an isolated headless browser; they do not access a desktop browser profile or capture the desktop screen.
 
 The browser checks cover page order, lazy loading, autoplay and manual pause, synchronized seeking, every experiment tab, durations including the final holds, keyboard navigation, the 3D viewer, mobile overflow and local request failures.
+
+`node scripts/verify-navigation-cache.cjs` runs the navigation cache regression using the same Playwright setup. It seeds a browser cache with the earlier sidebar release, reproduces the broken unversioned update, and verifies the versioned fix, rollback compatibility and mobile layout. This historical regression requires the full repository history.
 
 ## Nerfies attribution
 
