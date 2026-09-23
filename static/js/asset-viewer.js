@@ -129,16 +129,27 @@ async function startViewer() {
   window.addEventListener('resize', resize);
   resize();
 
-  renderer.setAnimationLoop(() => {
+  const draw = () => {
     controls.update();
     renderer.render(scene, camera);
-  });
+  };
+  let inViewport = true;
+  const updateRendering = () => renderer.setAnimationLoop(inViewport && !document.hidden ? draw : null);
+  const visibilityObserver = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
+    inViewport = entries[0].isIntersecting;
+    updateRendering();
+  }) : null;
+  visibilityObserver?.observe(canvas);
+  document.addEventListener('visibilitychange', updateRendering);
+  updateRendering();
 
   await selectAsset(assets[0].id);
 
   window.addEventListener('beforeunload', () => {
     pendingController?.abort();
     resizeObserver.disconnect();
+    visibilityObserver?.disconnect();
+    document.removeEventListener('visibilitychange', updateRendering);
     for (const entry of cache.values()) disposeEntry(entry);
     controls.dispose();
     floor.geometry.dispose();

@@ -1,0 +1,572 @@
+{
+  "schema_version": 1,
+  "description": "All 14 website MP4s include an additional 2-second final-frame hold. Source, pre-hold edit and final delivery provenance are recorded separately.",
+  "videos": [
+    {
+      "id": "overview",
+      "file": "./static/videos/overview.mp4",
+      "source_name": "DiagGen_cold_open_motivation_v7.mp4",
+      "sha256": "37196f6e26ea211cbb8451178453bcbb5ec2825606dad2194eeb8beb88f6e52f",
+      "size_bytes": 3626327,
+      "duration_seconds": 22.5,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "nb_frames": "675"
+      },
+      "has_audio": false,
+      "processing": "Preserved the complete pre-hold website edit at its original speed and dimensions, then appended 60 copies of its final frame (2 s). H.264 CRF 17; existing audio stream copied unchanged. Original sources retained.",
+      "source_kind": "Local approved production master",
+      "poster": "./static/posters/overview.jpg",
+      "poster_time_seconds": 10,
+      "pre_hold_sha256": "12d35fb8ad026d22d332f1e5c45ee44319076a3412de062e6feeb352b6666e7a",
+      "pre_hold_duration_seconds": 20.5,
+      "pre_hold_frame_count": 615,
+      "end_hold_seconds": 2,
+      "end_hold_frames": 60,
+      "source_processing": "Original file copied byte-for-byte; no cropping, trimming, retiming or re-encoding.",
+      "hold_script": "scripts/add-end-holds.py"
+    },
+    {
+      "id": "gallery",
+      "file": "./static/videos/gallery.mp4",
+      "source_name": "gallery_45s_postproduction_v8_1080p.mp4",
+      "sha256": "f1618192396f1a8ac8f275f8063a8ee37d486bf6a7567485744f411dad1e8a58",
+      "size_bytes": 25040048,
+      "duration_seconds": 47.0,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "nb_frames": "1410"
+      },
+      "has_audio": false,
+      "processing": "Preserved the complete pre-hold website edit at its original speed and dimensions, then appended 60 copies of its final frame (2 s). H.264 CRF 17; existing audio stream copied unchanged. Original sources retained.",
+      "source_kind": "Local approved production master",
+      "poster": "./static/posters/gallery.jpg",
+      "poster_time_seconds": 4,
+      "pre_hold_sha256": "e2d3d6e570853d06fdb6085da8b54f1b3dcbf5e799fd5b5b8efd6d9ec5eb4564",
+      "pre_hold_duration_seconds": 45.0,
+      "pre_hold_frame_count": 1350,
+      "end_hold_seconds": 2,
+      "end_hold_frames": 60,
+      "source_processing": "Original file copied byte-for-byte; no cropping, trimming, retiming or re-encoding.",
+      "hold_script": "scripts/add-end-holds.py"
+    },
+    {
+      "id": "pipeline",
+      "file": "./static/videos/pipeline.mp4",
+      "source_name": "DiagGen_method_before_diagnostics_v6.mp4",
+      "sha256": "b586b5fb9861d2106e3e00a88bb9daf4314d96349227e386dcb400a8f2557151",
+      "size_bytes": 2487911,
+      "duration_seconds": 30.0,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "nb_frames": "900"
+      },
+      "has_audio": false,
+      "processing": "Preserved the complete pre-hold website edit at its original speed and dimensions, then appended 60 copies of its final frame (2 s). H.264 CRF 17; existing audio stream copied unchanged. Original sources retained.",
+      "source_kind": "Local approved production master",
+      "poster": "./static/posters/pipeline.jpg",
+      "poster_time_seconds": 12,
+      "pre_hold_sha256": "4af537e45d4594aef94e20f306493c6d1993327f4ae1a6aff4f0115b88255f40",
+      "pre_hold_duration_seconds": 28.0,
+      "pre_hold_frame_count": 840,
+      "end_hold_seconds": 2,
+      "end_hold_frames": 60,
+      "source_processing": "Original file copied byte-for-byte; no cropping, trimming, retiming or re-encoding.",
+      "hold_script": "scripts/add-end-holds.py"
+    },
+    {
+      "id": "diagnostics",
+      "file": "./static/videos/diagnostics.mp4",
+      "source_name": "DiagGen_diagnostics_before_repair_v5.mp4",
+      "sha256": "1a827794a6652cbcb3ea317acd090f1ca2236bce77c5d50b93fe1634ef80db43",
+      "size_bytes": 1364925,
+      "duration_seconds": 26.0,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "nb_frames": "780"
+      },
+      "has_audio": false,
+      "processing": "Preserved the complete pre-hold website edit at its original speed and dimensions, then appended 60 copies of its final frame (2 s). H.264 CRF 17; existing audio stream copied unchanged. Original sources retained.",
+      "source_kind": "Local approved production master",
+      "poster": "./static/posters/diagnostics.jpg",
+      "poster_time_seconds": 5,
+      "pre_hold_sha256": "811ca447b61131585460d000f450d858c846fff72a5e161eb13fccacca04e589",
+      "pre_hold_duration_seconds": 24.0,
+      "pre_hold_frame_count": 720,
+      "end_hold_seconds": 2,
+      "end_hold_frames": 60,
+      "source_processing": "Original file copied byte-for-byte; no cropping, trimming, retiming or re-encoding.",
+      "hold_script": "scripts/add-end-holds.py"
+    },
+    {
+      "id": "repair-before",
+      "file": "./static/videos/repair-before.mp4",
+      "source_name": "usb-hub_baseline_blender.mp4",
+      "sha256": "d69e1c581fe45cbde1c79ce0da3dd3a60b2a48995fe6f37ea0ffa221b1ea1d8b",
+      "size_bytes": 1017667,
+      "duration_seconds": 14.0,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 960,
+        "r_frame_rate": "30/1",
+        "nb_frames": "420"
+      },
+      "has_audio": false,
+      "processing": "Preserved the complete pre-hold website edit at its original speed and dimensions, then appended 60 copies of its final frame (2 s). H.264 CRF 17; existing audio stream copied unchanged. Original sources retained.",
+      "source_url": "https://drive.google.com/file/d/1z4uJ-JPY1GOaoZ043d7kRNw50wy3SOdl/view?usp=drivesdk",
+      "poster": "./static/posters/repair-before.jpg",
+      "poster_time_seconds": 2,
+      "pre_hold_sha256": "71f13bc5ad542fec9f3938b0bf7e94b484b5690715c9d5d25ba78cc8326ac69b",
+      "pre_hold_duration_seconds": 12.0,
+      "pre_hold_frame_count": 360,
+      "end_hold_seconds": 2,
+      "end_hold_frames": 60,
+      "source_processing": "Original file copied byte-for-byte; no cropping, trimming, retiming or re-encoding.",
+      "hold_script": "scripts/add-end-holds.py"
+    },
+    {
+      "id": "repair-after",
+      "file": "./static/videos/repair-after.mp4",
+      "source_name": "usb-hub_revised_blender.mp4",
+      "sha256": "443e3b764cb734957e0fadc8d6e9fb87d313ef1322c96a56ef011792b59a149b",
+      "size_bytes": 997724,
+      "duration_seconds": 14.0,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 960,
+        "r_frame_rate": "30/1",
+        "nb_frames": "420"
+      },
+      "has_audio": false,
+      "processing": "Preserved the complete pre-hold website edit at its original speed and dimensions, then appended 60 copies of its final frame (2 s). H.264 CRF 17; existing audio stream copied unchanged. Original sources retained.",
+      "source_url": "https://drive.google.com/file/d/12QGjabhvwh-0Y7S-nksB2_UfCkst5ZhQ/view?usp=drivesdk",
+      "poster": "./static/posters/repair-after.jpg",
+      "poster_time_seconds": 2,
+      "pre_hold_sha256": "5a6a41e7873e263fd4f22ade5a251da332a9c22c7f65de5f746531e530eea1a1",
+      "pre_hold_duration_seconds": 12.0,
+      "pre_hold_frame_count": 360,
+      "end_hold_seconds": 2,
+      "end_hold_frames": 60,
+      "source_processing": "Original file copied byte-for-byte; no cropping, trimming, retiming or re-encoding.",
+      "hold_script": "scripts/add-end-holds.py"
+    },
+    {
+      "id": "sim-dino",
+      "file": "./static/videos/sim-dino.mp4",
+      "source_name": "twist_dino_in_playroom.mp4",
+      "sha256": "23a516e629010775a74c3d851cb36da7852c16113c22622781af7e30dd01acdc",
+      "size_bytes": 3077288,
+      "duration_seconds": 11.0,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "nb_frames": "330"
+      },
+      "has_audio": false,
+      "processing": "Preserved the complete pre-hold website edit at its original speed and dimensions, then appended 60 copies of its final frame (2 s). H.264 CRF 17; existing audio stream copied unchanged. Original sources retained.",
+      "source_url": "https://drive.google.com/file/d/10fNt-Qvf9Cb37lHbWCS3zutY1Pj5a6bi/view?usp=drivesdk",
+      "poster": "./static/posters/sim-dino.jpg",
+      "poster_time_seconds": 2,
+      "source_kind": "Full scene with bottom-left close-up inset",
+      "composition_script": "scripts/compose-simulation.py",
+      "composition": {
+        "source": "twist_dino_in_playroom.mp4",
+        "detail": "twist_dino_in_playroom.mp4",
+        "width": 1920,
+        "height": 1080,
+        "frames": 270,
+        "track": [
+          [
+            0,
+            474
+          ],
+          [
+            1,
+            474
+          ],
+          [
+            2,
+            433
+          ],
+          [
+            3,
+            318
+          ],
+          [
+            4,
+            280
+          ],
+          [
+            4.5,
+            303
+          ],
+          [
+            5,
+            351
+          ],
+          [
+            6,
+            342
+          ],
+          [
+            7,
+            399
+          ],
+          [
+            8,
+            353
+          ],
+          [
+            9,
+            353
+          ]
+        ]
+      },
+      "components": [
+        {
+          "source_name": "twist_dino_in_playroom.mp4",
+          "source_url": "https://drive.google.com/file/d/10fNt-Qvf9Cb37lHbWCS3zutY1Pj5a6bi/view?usp=drivesdk",
+          "sha256": "51780eb1fe33a00e15c4b933ef9d84bdca431bb9a3abfdbd46495cf282648633"
+        }
+      ],
+      "pre_hold_sha256": "6ffdfe4a813f89e709ad81ae82b1a0ebbb31f5d30f3caea048c8ce69904f4182",
+      "pre_hold_duration_seconds": 9.0,
+      "pre_hold_frame_count": 270,
+      "end_hold_seconds": 2,
+      "end_hold_frames": 60,
+      "source_processing": "Complete main source at its original dimensions, duration and 30 fps, with a lower-left detail inset. No main-view crop, trim or retiming. H.264 CRF 17 composition; source files preserved.",
+      "hold_script": "scripts/add-end-holds.py"
+    },
+    {
+      "id": "sim-dragon",
+      "file": "./static/videos/sim-dragon.mp4",
+      "source_name": "play_nailoong.mp4",
+      "sha256": "25910f98982a4ad70b0c9c9e77bcc752f20c4fa196057f631713b44ff3741d4d",
+      "size_bytes": 1483866,
+      "duration_seconds": 7.0,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "nb_frames": "210"
+      },
+      "has_audio": false,
+      "processing": "Preserved the complete pre-hold website edit at its original speed and dimensions, then appended 60 copies of its final frame (2 s). H.264 CRF 17; existing audio stream copied unchanged. Original sources retained.",
+      "source_url": "https://drive.google.com/file/d/1W9NhxHGpPo0WfwoE8S4AXvqRh6Pt5T1L/view?usp=drivesdk",
+      "poster": "./static/posters/sim-dragon.jpg",
+      "poster_time_seconds": 1.6666666666666667,
+      "source_kind": "Full scene with bottom-left close-up inset",
+      "composition_script": "scripts/compose-simulation.py",
+      "composition": {
+        "source": "play_nailoong.mp4",
+        "detail": "play_nailoong_close-up.mp4",
+        "width": 1920,
+        "height": 1080,
+        "frames": 150
+      },
+      "components": [
+        {
+          "source_name": "play_nailoong.mp4",
+          "source_url": "https://drive.google.com/file/d/1W9NhxHGpPo0WfwoE8S4AXvqRh6Pt5T1L/view?usp=drivesdk",
+          "sha256": "c5ae223e9e2dfb00f290e106812a2564a82e1cb5dd675e0a682124d959512975"
+        },
+        {
+          "source_name": "play_nailoong_close-up.mp4",
+          "source_url": "https://drive.google.com/file/d/1NeSr5n9ul5E1Lcl7jsJFo_g4atyw2b3R/view?usp=drivesdk",
+          "sha256": "8a1320d306dc2e8ebd14711afc2dc3c9c901a7020797f87d66673108f218deae"
+        }
+      ],
+      "pre_hold_sha256": "c39367f6919c6e3b3e839e18e8d26704c353baf7d0b8523efb10510620e8c4f1",
+      "pre_hold_duration_seconds": 5.0,
+      "pre_hold_frame_count": 150,
+      "end_hold_seconds": 2,
+      "end_hold_frames": 60,
+      "source_processing": "Complete main source at its original dimensions, duration and 30 fps, with a lower-left detail inset. No main-view crop, trim or retiming. H.264 CRF 17 composition; source files preserved.",
+      "hold_script": "scripts/add-end-holds.py"
+    },
+    {
+      "id": "sim-plunger",
+      "file": "./static/videos/sim-plunger.mp4",
+      "source_name": "plumbing_with_toilet_plunger.mp4",
+      "sha256": "414eff2274289091dbeaf9cb30c3fc86502eb0d59b6394e62f0fa36811828071",
+      "size_bytes": 2974307,
+      "duration_seconds": 24.0,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1200,
+        "r_frame_rate": "30/1",
+        "nb_frames": "720"
+      },
+      "has_audio": false,
+      "processing": "Preserved the complete pre-hold website edit at its original speed and dimensions, then appended 60 copies of its final frame (2 s). H.264 CRF 17; existing audio stream copied unchanged. Original sources retained.",
+      "source_url": "https://drive.google.com/file/d/1FFOAahWdbya_1WrPbdCO9eA_j0pBEXp_/view?usp=drivesdk",
+      "poster": "./static/posters/sim-plunger.jpg",
+      "poster_time_seconds": 17,
+      "source_kind": "Full scene with bottom-left close-up inset",
+      "composition_script": "scripts/compose-simulation.py",
+      "composition": {
+        "source": "plumbing_with_toilet_plunger.mp4",
+        "detail": "plumbing_with_toilet_plunger_cup_close-up.mp4",
+        "width": 1920,
+        "height": 1200,
+        "frames": 660,
+        "offset": 15
+      },
+      "components": [
+        {
+          "source_name": "plumbing_with_toilet_plunger.mp4",
+          "source_url": "https://drive.google.com/file/d/1FFOAahWdbya_1WrPbdCO9eA_j0pBEXp_/view?usp=drivesdk",
+          "sha256": "864b923d607342ae5e12086f58a9048064d7c977c50c25e57b0d296f8f3e83c0"
+        },
+        {
+          "source_name": "plumbing_with_toilet_plunger_cup_close-up.mp4",
+          "source_url": "https://drive.google.com/file/d/1daH2nulMahUyqkbDQFF5-PFetA2tzzJC/view?usp=drivesdk",
+          "sha256": "13cb3a56db12bee5572a2d73e8ef8cb6e815f557aeffda04c5199b7d25a80982"
+        }
+      ],
+      "pre_hold_sha256": "f48748b62b9c7b52ee61dd12473a34ce14b63cd535975ce24ef7a093603de32f",
+      "pre_hold_duration_seconds": 22.0,
+      "pre_hold_frame_count": 660,
+      "end_hold_seconds": 2,
+      "end_hold_frames": 60,
+      "source_processing": "Complete main source at its original dimensions, duration and 30 fps, with a lower-left detail inset. No main-view crop, trim or retiming. H.264 CRF 17 composition; source files preserved.",
+      "hold_script": "scripts/add-end-holds.py"
+    },
+    {
+      "id": "sim-sauce",
+      "file": "./static/videos/sim-sauce.mp4",
+      "source_name": "spray_sauce_full-view.mp4",
+      "sha256": "251607018a306a4a4b3253133896525f3eee0db0695c43e4b5c6e6a731708867",
+      "size_bytes": 1964193,
+      "duration_seconds": 15.033333,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "nb_frames": "451"
+      },
+      "has_audio": false,
+      "processing": "Preserved the complete pre-hold website edit at its original speed and dimensions, then appended 60 copies of its final frame (2 s). H.264 CRF 17; existing audio stream copied unchanged. Original sources retained.",
+      "source_url": "https://drive.google.com/file/d/198BsD6UN3oNrmGF8eGDle9dH7-eMw31S/view?usp=drivesdk",
+      "poster": "./static/posters/sim-sauce.jpg",
+      "poster_time_seconds": 2,
+      "source_kind": "Full scene with bottom-left close-up inset",
+      "composition_script": "scripts/compose-simulation.py",
+      "composition": {
+        "source": "spray_sauce_full-view.mp4",
+        "detail": "spray_sauce_close-up.mp4",
+        "width": 1920,
+        "height": 1080,
+        "frames": 391,
+        "source_dropouts": [
+          [
+            132,
+            133
+          ],
+          [
+            357,
+            366
+          ],
+          [
+            370,
+            371
+          ]
+        ]
+      },
+      "components": [
+        {
+          "source_name": "spray_sauce_full-view.mp4",
+          "source_url": "https://drive.google.com/file/d/198BsD6UN3oNrmGF8eGDle9dH7-eMw31S/view?usp=drivesdk",
+          "sha256": "0b4588bf63eb780fecad27b485dd202a3b1ab29d613c57c4cef63caaf63deb06"
+        },
+        {
+          "source_name": "spray_sauce_close-up.mp4",
+          "source_url": "https://drive.google.com/file/d/1gcisoTlDz1Sq6XsZJXs6rHZ2hVo_i5H_/view?usp=drivesdk",
+          "sha256": "a9dceb61fd7b81851855b3a23a794e7b9645e03c23b16f52a24aeaf24e08fa1c"
+        }
+      ],
+      "pre_hold_sha256": "cf07e1994ed44d831a98ab39fcb46172079c9c695f71e09005cc197d192ade09",
+      "pre_hold_duration_seconds": 13.033333,
+      "pre_hold_frame_count": 391,
+      "end_hold_seconds": 2,
+      "end_hold_frames": 60,
+      "source_processing": "Complete main source at its original dimensions, duration and 30 fps, with a lower-left detail inset. No main-view crop, trim or retiming. H.264 CRF 17 composition; source files preserved.",
+      "hold_script": "scripts/add-end-holds.py"
+    },
+    {
+      "id": "real-plush",
+      "file": "./static/videos/real-plush.mp4",
+      "source_name": "real_zed_left_1080p.mp4 + plush_sim_woven_basket_1080p.mp4",
+      "sha256": "7797834f7b6163a38907ba6392bff961db9bff28a11fb6fd01eabdbe0539f273",
+      "size_bytes": 3348540,
+      "duration_seconds": 11.4,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 2560,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "nb_frames": "342"
+      },
+      "has_audio": false,
+      "processing": "Preserved the complete pre-hold website edit at its original speed and dimensions, then appended 60 copies of its final frame (2 s). H.264 CRF 17; existing audio stream copied unchanged. Original sources retained.",
+      "source_url": "https://drive.google.com/file/d/1zPMQT8KHkBspQpFbrxt_k-rh-LyjBfKB/view",
+      "poster": "./static/posters/real-plush.jpg",
+      "poster_time_seconds": 2,
+      "source_kind": "Side-by-side composition from the two full Plush source clips",
+      "composition_script": "scripts/compose-plush.py",
+      "components": [
+        {
+          "source_name": "real_zed_left_1080p.mp4",
+          "sha256": "f94e5d36a78db5338e7f9a032cc7472d31d07fb487f45e2e513849c219ad1f26",
+          "duration_seconds": 9.4,
+          "video": {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "nb_frames": "282"
+          },
+          "source_url": "https://drive.google.com/file/d/1zPMQT8KHkBspQpFbrxt_k-rh-LyjBfKB/view",
+          "archive_member": "plush_for_share_flipped_dx50/real_zed_left_1080p.mp4"
+        },
+        {
+          "source_name": "plush_sim_woven_basket_1080p.mp4",
+          "sha256": "9cc7b0c7b91da28d3f5b242ac0861e21947a7ba189083b1a59ca129f32eddaf4",
+          "duration_seconds": 9.4,
+          "video": {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "nb_frames": "282"
+          },
+          "source_url": "https://drive.google.com/file/d/1zPMQT8KHkBspQpFbrxt_k-rh-LyjBfKB/view",
+          "archive_member": "plush_for_share_flipped_dx50/plush_sim_woven_basket_1080p.mp4"
+        }
+      ],
+      "pre_hold_sha256": "af541aea46856859acf8abbc9a8128881b5347a252b80ce7a25cb86f13c621a6",
+      "pre_hold_duration_seconds": 9.4,
+      "pre_hold_frame_count": 282,
+      "end_hold_seconds": 2,
+      "end_hold_frames": 60,
+      "source_processing": "Both complete 282-frame sequences are scaled to 1280x720 and placed side-by-side, real left and simulation right. Encoded H.264 CRF 17. No cropping, trimming or retiming; original sources retained.",
+      "hold_script": "scripts/add-end-holds.py"
+    },
+    {
+      "id": "real-dino",
+      "file": "./static/videos/real-dino.mp4",
+      "source_name": "twist_dino_real_vs_sim_blender.mp4",
+      "sha256": "d13cbbc602f639ab0a90bc6a8251d00382437a15a1ba5f3abb64f8e77b2e40aa",
+      "size_bytes": 11145131,
+      "duration_seconds": 23.0,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 2560,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "nb_frames": "690"
+      },
+      "has_audio": false,
+      "processing": "Preserved the complete pre-hold website edit at its original speed and dimensions, then appended 60 copies of its final frame (2 s). H.264 CRF 17; existing audio stream copied unchanged. Original sources retained.",
+      "source_url": "https://drive.google.com/file/d/1OccxgRHKqyl-XFUXjcm1bruEk-N4bKn0/view?usp=drivesdk",
+      "poster": "./static/posters/real-dino.jpg",
+      "poster_time_seconds": 2,
+      "pre_hold_sha256": "f9ab9ace04597608243b97b5a9ae7a5bca13808ec7285730f5d148ca19eb9e52",
+      "pre_hold_duration_seconds": 21.0,
+      "pre_hold_frame_count": 630,
+      "end_hold_seconds": 2,
+      "end_hold_frames": 60,
+      "source_processing": "Original file copied byte-for-byte; no cropping, trimming, retiming or re-encoding.",
+      "hold_script": "scripts/add-end-holds.py"
+    },
+    {
+      "id": "real-bottle",
+      "file": "./static/videos/real-bottle.mp4",
+      "source_name": "squeeze_bottle_real_vs_sim_blender.mp4",
+      "sha256": "b77f605db5cce97d49742a67df71bf937ae692302836ad28ea62b1f8445d668d",
+      "size_bytes": 8855064,
+      "duration_seconds": 18.0,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 2560,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "nb_frames": "540"
+      },
+      "has_audio": false,
+      "processing": "Preserved the complete pre-hold website edit at its original speed and dimensions, then appended 60 copies of its final frame (2 s). H.264 CRF 17; existing audio stream copied unchanged. Original sources retained.",
+      "source_url": "https://drive.google.com/file/d/1N12bEzQDfhcfhwuEVuUlqVRXRhL-F3ym/view?usp=drivesdk",
+      "poster": "./static/posters/real-bottle.jpg",
+      "poster_time_seconds": 2,
+      "pre_hold_sha256": "05bb4529e0f3790946079904e5b4b8159e118a8103d831bd7ec223f70fd0f2e8",
+      "pre_hold_duration_seconds": 16.0,
+      "pre_hold_frame_count": 480,
+      "end_hold_seconds": 2,
+      "end_hold_frames": 60,
+      "source_processing": "Original file copied byte-for-byte; no cropping, trimming, retiming or re-encoding.",
+      "hold_script": "scripts/add-end-holds.py"
+    },
+    {
+      "id": "full-film",
+      "file": "./static/videos/full-film.mp4",
+      "source_name": "DiagGen_full_compilation_v7_bgm.mp4",
+      "sha256": "db358e06ff03fe2c57275d90aae2cd7182e7ca2b14aeeee3cc191867875197fd",
+      "size_bytes": 54835442,
+      "duration_seconds": 180.4,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "nb_frames": "5412"
+      },
+      "has_audio": true,
+      "processing": "Preserved the complete pre-hold website edit at its original speed and dimensions, then appended 60 copies of its final frame (2 s). H.264 CRF 17; existing audio stream copied unchanged. Original sources retained.",
+      "source_kind": "Local approved production master",
+      "poster": "./static/posters/full-film.jpg",
+      "poster_time_seconds": 22,
+      "pre_hold_sha256": "a08a1266a46cce0d7c07cf062e00a73d4842f0ad29a90695bf90cd25bcc3deb3",
+      "pre_hold_duration_seconds": 178.4,
+      "pre_hold_frame_count": 5352,
+      "end_hold_seconds": 2,
+      "end_hold_frames": 60,
+      "source_processing": "Original file copied byte-for-byte; no cropping, trimming, retiming or re-encoding.",
+      "hold_script": "scripts/add-end-holds.py"
+    }
+  ]
+}

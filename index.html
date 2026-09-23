@@ -11,6 +11,8 @@
         rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/site.css">
+  <script defer src="./static/js/site.js"></script>
   <script type="importmap">
     {
       "imports": {
@@ -21,8 +23,13 @@
   </script>
 </head>
 <body>
+<a class="skip-link" href="#overview">Skip to content</a>
+  <nav class="page-rail" aria-label="Page sections">
+    <a class="rail-brand" href="#top">DiagGen<span>From images to simulation</span></a>
+    <p class="rail-label">On this page</p><ol class="progress-track"><li class="progress-item" data-section="overview"><a href="#overview"><span class="progress-dot" aria-hidden="true"></span><span>Overview</span></a></li><li class="progress-item" data-section="interactive-viewer"><a href="#interactive-viewer"><span class="progress-dot" aria-hidden="true"></span><span>Asset gallery</span></a></li><li class="progress-item" data-section="method"><a href="#method"><span class="progress-dot" aria-hidden="true"></span><span>Method</span></a></li><li class="progress-item" data-section="simulation"><a href="#simulation"><span class="progress-dot" aria-hidden="true"></span><span>Simulation applications</span></a></li><li class="progress-item" data-section="real-world"><a href="#real-world"><span class="progress-dot" aria-hidden="true"></span><span>Real-world experiments</span></a></li><li class="progress-item" data-section="video"><a href="#video"><span class="progress-dot" aria-hidden="true"></span><span>Full video</span></a></li><li class="progress-item" data-section="BibTeX"><a href="#BibTeX"><span class="progress-dot" aria-hidden="true"></span><span>Citation</span></a></li></ol></nav>
+<div class="page-shell">
   <main>
-    <section class="hero publication-header">
+    <section class="hero publication-header" id="top">
       <div class="hero-body">
         <div class="container is-max-desktop">
           <div class="has-text-centered">
@@ -72,34 +79,29 @@
       </div>
     </section>
 
-    <section class="section video-section" id="video">
+<section class="section chapter" id="overview" aria-labelledby="overview-title">
       <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Video</h2>
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/_sARsG-4vyM"
-            title="DiagGen project video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-            credentialless>
-          </iframe>
+        <div class="section-divider"><span class="section-number" aria-hidden="true">01</span><span class="divider-line"></span></div>
+        <header class="chapter-heading"><h2 id="overview-title" class="title is-3">Overview</h2><p>From a single image to a deformable asset that can be tested, repaired and used in simulation.</p></header><div class="media-unit" data-media-unit>
+          <video id="video-overview" data-src="./static/videos/overview.mp4" poster="./static/posters/overview.jpg"
+              width="1920" height="1080" autoplay muted loop playsinline preload="none" controls
+              aria-label="DiagGen opener and motivation">Your browser does not support embedded video. <a href="./static/videos/overview.mp4">Open this video</a>.</video>
+          <button class="play-fallback" type="button" hidden>Play video</button>
+          <p class="media-error" role="status" hidden>Unable to load this video. <a href="./static/videos/overview.mp4">Open the original video</a>.</p>
+        </div><div class="contributions">
+          <h3 class="subsection-title">Our contributions</h3>
+          <ol class="contribution-list">
+            <li><span class="contribution-index" aria-hidden="true">01</span><div><h4>From one image to a deformable asset</h4><p>DiagGen generates part-aware geometry and material properties from an everyday image, then tests the resulting asset through controlled interactions in a physics simulator.</p></div></li>
+            <li><span class="contribution-index" aria-hidden="true">02</span><div><h4>Simulation feedback guides targeted repair</h4><p>A diagnostic agent probes informative regions and sends repair cues to segmentation, material inference or mesh processing. Evaluation on 40 assets shows useful feedback and moderate improvements after repair.</p></div></li>
+            <li><span class="contribution-index" aria-hidden="true">03</span><div><h4>Assets for robotic simulation</h4><p>Generated assets support contact-rich manipulation and integration into reconstructed real-world scenes. Their connectivity and material behavior make a visible difference in downstream use.</p></div></li>
+          </ol>
         </div>
       </div>
     </section>
-
-    <section class="section asset-section" id="interactive-viewer" aria-labelledby="asset-section-title">
+<section class="section chapter" id="interactive-viewer" aria-labelledby="interactive-viewer-title">
       <div class="container is-max-desktop">
-        <div class="asset-section-heading has-text-centered">
-          <p class="asset-eyebrow">Interactive 3D</p>
-          <h2 class="title is-3" id="asset-section-title">Explore the assets</h2>
-          <p class="asset-section-intro">
-            Take a closer look at six DiagGen assets. Rotate to explore their textured surfaces,
-            tetrahedral mesh boundaries, and part segmentation.
-          </p>
-        </div>
-
-        <div class="asset-tabs" id="asset-tabs" role="tablist" aria-label="Choose an asset">
+        <div class="section-divider"><span class="section-number" aria-hidden="true">02</span><span class="divider-line"></span></div>
+        <header class="chapter-heading"><h2 id="interactive-viewer-title" class="title is-3">Asset gallery</h2><p>Explore the geometry, part structure and materials of generated everyday objects.</p></header><div class="subsection-heading"><p class="eyebrow">Interactive 3D</p><h3 class="subsection-title" id="asset-section-title">Explore the assets</h3><p>Rotate six DiagGen assets and switch between textured surfaces, tetrahedral boundaries, source detail and part segmentation.</p></div>        <div class="asset-tabs" id="asset-tabs" role="tablist" aria-label="Choose an asset">
           <button class="asset-tab is-active" id="asset-tab-dragon" type="button" role="tab"
                   aria-selected="true" aria-controls="asset-panel" tabindex="0" data-asset="dragon">Dragon</button>
           <button class="asset-tab" id="asset-tab-curling-iron" type="button" role="tab"
@@ -157,7 +159,7 @@
               </svg>
               Reset view
             </button>
-            <p class="asset-status" id="asset-status" role="status" aria-live="polite" aria-atomic="true">Loading Dragon…</p>
+            <p class="asset-status" id="asset-status" role="status" aria-live="polite" aria-atomic="true">The 3D viewer loads as you approach.</p>
           </div>
           <div class="asset-part-legend" id="asset-part-legend" aria-label="Segmentation parts" hidden></div>
         </div>
@@ -165,25 +167,154 @@
         <p class="asset-interaction-help" id="asset-interaction-help">
           <span>Drag to rotate</span><span>Scroll to zoom</span><span>Right-drag to pan</span>
         </p>
+<div class="content-block gallery-film"><div class="subsection-heading"><h3 class="subsection-title">More generated assets</h3><p>From the input photograph to a generated object, with a closer look at its different material regions.</p></div><div class="media-unit" data-media-unit>
+          <video id="video-gallery" data-src="./static/videos/gallery.mp4" poster="./static/posters/gallery.jpg"
+              width="1920" height="1080" autoplay muted loop playsinline preload="none" controls
+              aria-label="Generated asset gallery with rotating and flipping views">Your browser does not support embedded video. <a href="./static/videos/gallery.mp4">Open this video</a>.</video>
+          <button class="play-fallback" type="button" hidden>Play video</button>
+          <p class="media-error" role="status" hidden>Unable to load this video. <a href="./static/videos/gallery.mp4">Open the original video</a>.</p>
+        </div><p class="media-caption">Each asset begins with a single phone or internet image. The gallery shows generated meshes and their part-wise material specifications.</p></div>
       </div>
     </section>
-
-    <section class="section abstract-section" id="abstract">
+<section class="section chapter" id="method" aria-labelledby="method-title">
       <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Abstract</h2>
-        <div class="content abstract-content">
-          <p>
-            While simulation-ready deformable assets are essential for in-silico robotic manipulation tasks, existing generation frameworks typically assess physical plausibility after generation, leaving an object's simulated response unused as feedback for repairing upstream errors. We present DiagGen, an agentic framework that turns a single in-the-wild image into a simulation-ready deformable asset through a generate–simulate–diagnose–refine loop. DiagGen constructs part-aware geometry and material parameters, then uses a VLM (vision-language model)-based agent to select semantically informative regions, probe them in a physics simulator, observe material responses, and route evidence-backed repair cues to the responsible generation stage. Experiments on 40 assets show that diagnostics provides useful repair cues and can moderately improve the quality of generated deformable assets. Finally, we show that unlike assets generated from visual foundation models which may not be simulatable, DiagGen-generated deformables can be directly dropped into a high-fidelity physical simulator for the planning and simulation of contact-rich pick-and-place tasks.
-          </p>
-        </div>
+        <div class="section-divider"><span class="section-number" aria-hidden="true">03</span><span class="divider-line"></span></div>
+        <header class="chapter-heading"><h2 id="method-title" class="title is-3">Method</h2><p>Generate. Simulate. Diagnose. Refine. Physical interactions provide feedback for the next revision.</p></header><article class="method-block" aria-labelledby="pipeline-title"><div class="subsection-heading"><p class="eyebrow">01 / Generate</p><h3 class="subsection-title" id="pipeline-title">Generation pipeline</h3></div><div class="media-unit" data-media-unit>
+          <video id="video-pipeline" data-src="./static/videos/pipeline.mp4" poster="./static/posters/pipeline.jpg"
+              width="1920" height="1080" autoplay muted loop playsinline preload="none" controls
+              aria-label="DiagGen generation pipeline">Your browser does not support embedded video. <a href="./static/videos/pipeline.mp4">Open this video</a>.</video>
+          <button class="play-fallback" type="button" hidden>Play video</button>
+          <p class="media-error" role="status" hidden>Unable to load this video. <a href="./static/videos/pipeline.mp4">Open the original video</a>.</p>
+        </div><p class="media-caption">DiagGen converts a single image into a deformable asset through a generate–simulate–diagnose–refine loop. Stage agents coordinate geometry, material inference and meshing; model backends support their reasoning, and tools execute and validate each stage. Simulation evidence can route a candidate back for repair before export.</p>
+        <details class="figure-details"><summary>View the architecture diagram</summary><figure><a href="./static/figures/architecture.png" target="_blank" rel="noreferrer"><img src="./static/figures/architecture.png" alt="DiagGen architecture: stage agents direct model backends and tools through image cleanup, segmentation, part reconstruction, material inference, mesh processing and simulator diagnostics; repair routes return to upstream stages." loading="lazy"></a><figcaption>Architecture of DiagGen. Select the figure to open it at full resolution.</figcaption></figure></details></article><article class="method-block" aria-labelledby="diagnostics-title"><div class="subsection-heading"><p class="eyebrow">02 / Test and diagnose</p><h3 class="subsection-title" id="diagnostics-title">Simulation-based diagnostics</h3></div><div class="media-unit" data-media-unit>
+          <video id="video-diagnostics" data-src="./static/videos/diagnostics.mp4" poster="./static/posters/diagnostics.jpg"
+              width="1920" height="1080" autoplay muted loop playsinline preload="none" controls
+              aria-label="Simulation-based diagnosis of the curling iron">Your browser does not support embedded video. <a href="./static/videos/diagnostics.mp4">Open this video</a>.</video>
+          <button class="play-fallback" type="button" hidden>Play video</button>
+          <p class="media-error" role="status" hidden>Unable to load this video. <a href="./static/videos/diagnostics.mp4">Open the original video</a>.</p>
+        </div><p class="media-caption">The agent selects a meaningful region, applies a controlled grasp, and observes deformation and recovery after release. It can run another probe when the evidence is insufficient, then recommend acceptance or a repair at the responsible generation stage.</p>
+        <details class="figure-details"><summary>View the diagnostic workflow</summary><figure><a href="./static/figures/diagnostic-workflow.png" target="_blank" rel="noreferrer"><img src="./static/figures/diagnostic-workflow.png" alt="Diagnostic agent workflow: plan an interaction, target an anchor and grasp region, simulate compression, observe maximum deformation and release, and assess whether to accept or repair." loading="lazy"></a><figcaption>Diagnostic-agent workflow, including the anchor, grasp region, deformation and recovery observations.</figcaption></figure></details></article><article class="method-block" aria-labelledby="repair-title"><div class="subsection-heading"><p class="eyebrow">03 / Repair and evaluate</p><h3 class="subsection-title" id="repair-title">What repair changes</h3><p>A USB hub before and after diagnostics-guided segmentation repair, under the same grasp-and-lift action.</p></div><div class="media-unit paired-unit" data-media-unit data-paired>
+          <div class="paired-grid"><figure class="paired-clip"><figcaption>Before repair</figcaption><video id="video-repair-before" data-src="./static/videos/repair-before.mp4" poster="./static/posters/repair-before.jpg"
+              width="1280" height="960" autoplay muted loop playsinline preload="none"
+              aria-label="Before repair">Your browser does not support embedded video. <a href="./static/videos/repair-before.mp4">Open this video</a>.</video></figure><figure class="paired-clip"><figcaption>After repair</figcaption><video id="video-repair-after" data-src="./static/videos/repair-after.mp4" poster="./static/posters/repair-after.jpg"
+              width="1280" height="960" autoplay muted loop playsinline preload="none"
+              aria-label="After repair">Your browser does not support embedded video. <a href="./static/videos/repair-after.mp4">Open this video</a>.</video></figure></div>
+          <div class="pair-controls" aria-label="USB hub comparison playback controls">
+            <button type="button" data-toggle-play aria-label="Play USB hub comparison">Play</button>
+            <button type="button" data-replay aria-label="Replay USB hub comparison">Replay</button>
+            <input type="range" data-seek min="0" max="1000" value="0" step="1" aria-label="Seek USB hub comparison">
+            <span data-time class="time-display">0:00</span>
+            <button type="button" data-fullscreen aria-label="Fullscreen USB hub comparison">Fullscreen</button>
+          </div>
+          <button class="play-fallback" type="button" hidden>Play comparison</button>
+          <p class="media-error" role="status" hidden>Unable to load the comparison. <a href="./static/videos/repair-before.mp4">Open the first video</a> or <a href="./static/videos/repair-after.mp4">the second video</a>.</p>
+        </div><p class="media-caption">Before repair, the cable retains an overly stiff bend. After repair, the cable is represented separately from the case, allowing it to stay connected, deform under gravity and let the connector hang naturally.</p>
+        <div class="results-card" aria-labelledby="pmsc-title">
+          <div class="results-heading"><div><p class="eyebrow">Across the revised assets</p><h4 id="pmsc-title">Better part–material specifications</h4></div><span class="result-delta">+1.29 <span>points</span></span></div>
+          <p class="results-intro">Mean <abbr title="Part–Material Specification Consistency">PMSC</abbr> improves from <strong>2.14 to 3.43</strong> on the five-point scale.</p>
+          <div class="pmsc-chart" role="img" aria-label="Mean Part–Material Specification Consistency, on a scale of 1 to 5, for 14 revised assets: before repair 2.14; after repair 3.43.">
+            <div class="chart-row"><span>Before repair</span><div class="chart-track"><span class="chart-bar before" style="--score-position:28.5%"><b>2.14</b></span></div></div>
+            <div class="chart-row"><span>After repair</span><div class="chart-track"><span class="chart-bar after" style="--score-position:60.75%"><b>3.43</b></span></div></div>
+            <div class="chart-axis"><span></span><div><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div></div>
+          </div>
+          <dl class="result-counts"><div><dt>Improved</dt><dd>10</dd></div><div><dt>Unchanged</dt><dd>4</dd></div><div><dt>Declined</dt><dd>0</dd></div></dl>
+          <p class="results-note">Paired results for the <strong>14 assets selected for repair</strong> out of 40 evaluated. PMSC measures consistency of the static part and material specification with the source image and material priors. <a href="./static/DiagGen_pub-release_26-09-19-14-27.pdf">Read the evaluation in the paper ↗</a></p>
+        </div></article>
       </div>
     </section>
-  </main>
-
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{chen2026diaggenagenticgenerationdeformable,
+<section class="section chapter" id="simulation" aria-labelledby="simulation-title">
+      <div class="container is-max-desktop">
+        <div class="section-divider"><span class="section-number" aria-hidden="true">04</span><span class="divider-line"></span></div>
+        <header class="chapter-heading"><h2 id="simulation-title" class="title is-3">Simulation applications</h2><p>Generated deformable objects in contact-rich robotic tasks.</p></header><div class="experiment-gallery" data-video-tabs>
+<div class="experiment-tabs" role="tablist" aria-label="Choose a sim example"><button class="experiment-tab" id="sim-tab-dino" type="button" role="tab" aria-selected="true" aria-controls="sim-panel-dino" tabindex="0">
+          <img src="./static/posters/sim-dino.jpg" alt="" width="320" height="180" loading="lazy"><span class="tab-title">Dino</span><span class="tab-detail">Bimanual twisting</span></button><button class="experiment-tab" id="sim-tab-dragon" type="button" role="tab" aria-selected="false" aria-controls="sim-panel-dragon" tabindex="-1">
+          <img src="./static/posters/sim-dragon.jpg" alt="" width="320" height="180" loading="lazy"><span class="tab-title">Dragon</span><span class="tab-detail">Grasping a soft toy</span></button><button class="experiment-tab" id="sim-tab-plunger" type="button" role="tab" aria-selected="false" aria-controls="sim-panel-plunger" tabindex="-1">
+          <img src="./static/posters/sim-plunger.jpg" alt="" width="320" height="180" loading="lazy"><span class="tab-title">Toilet Plunger</span><span class="tab-detail">Contact and cup compression</span></button><button class="experiment-tab" id="sim-tab-sauce" type="button" role="tab" aria-selected="false" aria-controls="sim-panel-sauce" tabindex="-1">
+          <img src="./static/posters/sim-sauce.jpg" alt="" width="320" height="180" loading="lazy"><span class="tab-title">Sauce Keeper</span><span class="tab-detail">Grasping and squeezing</span></button></div><div class="experiment-panel" id="sim-panel-dino" role="tabpanel" aria-labelledby="sim-tab-dino" tabindex="0" >
+          <div class="example-heading"><h3>Dino <span>· Bimanual twisting</span></h3><span class="duration">11 s · 1×</span></div>
+          <div class="media-unit" data-media-unit>
+          <video id="video-sim-dino" data-src="./static/videos/sim-dino.mp4" poster="./static/posters/sim-dino.jpg"
+              width="1920" height="1080" autoplay muted loop playsinline preload="none" controls
+              aria-label="Dino — Bimanual twisting">Your browser does not support embedded video. <a href="./static/videos/sim-dino.mp4">Open this video</a>.</video>
+          <button class="play-fallback" type="button" hidden>Play video</button>
+          <p class="media-error" role="status" hidden>Unable to load this video. <a href="./static/videos/sim-dino.mp4">Open the original video</a>.</p>
+        </div><p class="media-caption">Two grippers twist the soft dinosaur. Watch how the body deforms while staying connected.</p></div><div class="experiment-panel" id="sim-panel-dragon" role="tabpanel" aria-labelledby="sim-tab-dragon" tabindex="0" hidden>
+          <div class="example-heading"><h3>Dragon <span>· Grasping a soft toy</span></h3><span class="duration">7 s · 1×</span></div>
+          <div class="media-unit" data-media-unit>
+          <video id="video-sim-dragon" data-src="./static/videos/sim-dragon.mp4" poster="./static/posters/sim-dragon.jpg"
+              width="1920" height="1080" autoplay muted loop playsinline preload="none" controls
+              aria-label="Dragon — Grasping a soft toy">Your browser does not support embedded video. <a href="./static/videos/sim-dragon.mp4">Open this video</a>.</video>
+          <button class="play-fallback" type="button" hidden>Play video</button>
+          <p class="media-error" role="status" hidden>Unable to load this video. <a href="./static/videos/sim-dragon.mp4">Open the original video</a>.</p>
+        </div><p class="media-caption">The soft dragon deforms under the gripper, while the connected ring and clasp retain their shape.</p></div><div class="experiment-panel" id="sim-panel-plunger" role="tabpanel" aria-labelledby="sim-tab-plunger" tabindex="0" hidden>
+          <div class="example-heading"><h3>Toilet Plunger <span>· Contact and cup compression</span></h3><span class="duration">24 s · 1×</span></div>
+          <div class="media-unit" data-media-unit>
+          <video id="video-sim-plunger" data-src="./static/videos/sim-plunger.mp4" poster="./static/posters/sim-plunger.jpg"
+              width="1920" height="1200" autoplay muted loop playsinline preload="none" controls
+              aria-label="Toilet Plunger — Contact and cup compression">Your browser does not support embedded video. <a href="./static/videos/sim-plunger.mp4">Open this video</a>.</video>
+          <button class="play-fallback" type="button" hidden>Play video</button>
+          <p class="media-error" role="status" hidden>Unable to load this video. <a href="./static/videos/sim-plunger.mp4">Open the original video</a>.</p>
+        </div><p class="media-caption">The rubber cup compresses against the surface as the robot moves the handle. The close-up appears during the final contact sequence.</p></div><div class="experiment-panel" id="sim-panel-sauce" role="tabpanel" aria-labelledby="sim-tab-sauce" tabindex="0" hidden>
+          <div class="example-heading"><h3>Sauce Keeper <span>· Grasping and squeezing</span></h3><span class="duration">15 s · 1×</span></div>
+          <div class="media-unit" data-media-unit>
+          <video id="video-sim-sauce" data-src="./static/videos/sim-sauce.mp4" poster="./static/posters/sim-sauce.jpg"
+              width="1920" height="1080" autoplay muted loop playsinline preload="none" controls
+              aria-label="Sauce Keeper — Grasping and squeezing">Your browser does not support embedded video. <a href="./static/videos/sim-sauce.mp4">Open this video</a>.</video>
+          <button class="play-fallback" type="button" hidden>Play video</button>
+          <p class="media-error" role="status" hidden>Unable to load this video. <a href="./static/videos/sim-sauce.mp4">Open the original video</a>.</p>
+        </div><p class="media-caption">The gripper squeezes the flexible sauce container. Watch the local deformation around the contact region.</p></div></div><p class="section-note">Only the manipulated deformable object is generated by our pipeline. Tasks are dynamically simulated in Genesis.</p>
+      </div>
+    </section>
+<section class="section chapter" id="real-world" aria-labelledby="real-world-title">
+      <div class="container is-max-desktop">
+        <div class="section-divider"><span class="section-number" aria-hidden="true">05</span><span class="divider-line"></span></div>
+        <header class="chapter-heading"><h2 id="real-world-title" class="title is-3">Real-world experiments</h2><p>Real robot manipulations and their physics-based simulation counterparts.</p></header><div class="experiment-gallery" data-video-tabs>
+<div class="experiment-tabs" role="tablist" aria-label="Choose a real example"><button class="experiment-tab" id="real-tab-plush" type="button" role="tab" aria-selected="true" aria-controls="real-panel-plush" tabindex="0">
+          <img src="./static/posters/real-plush.jpg" alt="" width="320" height="180" loading="lazy"><span class="tab-title">Plush</span><span class="tab-detail">Pick and place</span></button><button class="experiment-tab" id="real-tab-dino" type="button" role="tab" aria-selected="false" aria-controls="real-panel-dino" tabindex="-1">
+          <img src="./static/posters/real-dino.jpg" alt="" width="320" height="180" loading="lazy"><span class="tab-title">Dino</span><span class="tab-detail">Twisting</span></button><button class="experiment-tab" id="real-tab-bottle" type="button" role="tab" aria-selected="false" aria-controls="real-panel-bottle" tabindex="-1">
+          <img src="./static/posters/real-bottle.jpg" alt="" width="320" height="180" loading="lazy"><span class="tab-title">Bottle</span><span class="tab-detail">Pick and tilt</span></button></div><div class="experiment-panel" id="real-panel-plush" role="tabpanel" aria-labelledby="real-tab-plush" tabindex="0" >
+          <div class="example-heading"><h3>Plush <span>· Pick and place</span></h3><span class="duration">11.4 s · 1×</span></div>
+          <div class="comparison-labels" aria-hidden="true"><span>Real robot</span><span>Physics-based simulation</span></div><div class="media-unit" data-media-unit>
+          <video id="video-real-plush" data-src="./static/videos/real-plush.mp4" poster="./static/posters/real-plush.jpg"
+              width="2560" height="720" autoplay muted loop playsinline preload="none" controls
+              aria-label="Plush — Pick and place">Your browser does not support embedded video. <a href="./static/videos/real-plush.mp4">Open this video</a>.</video>
+          <button class="play-fallback" type="button" hidden>Play video</button>
+          <p class="media-error" role="status" hidden>Unable to load this video. <a href="./static/videos/real-plush.mp4">Open the original comparison</a>.</p>
+        </div><p class="media-caption">An AIRBOT places a plush toy in a basket. The simulation renders the robot, plush and reconstructed basket over a real background.</p></div><div class="experiment-panel" id="real-panel-dino" role="tabpanel" aria-labelledby="real-tab-dino" tabindex="0" hidden>
+          <div class="example-heading"><h3>Dino <span>· Twisting</span></h3><span class="duration">23 s · 1×</span></div>
+          <div class="comparison-labels" aria-hidden="true"><span>Real robot</span><span>Physics-based simulation</span></div><div class="media-unit" data-media-unit>
+          <video id="video-real-dino" data-src="./static/videos/real-dino.mp4" poster="./static/posters/real-dino.jpg"
+              width="2560" height="720" autoplay muted loop playsinline preload="none" controls
+              aria-label="Dino — Twisting">Your browser does not support embedded video. <a href="./static/videos/real-dino.mp4">Open this video</a>.</video>
+          <button class="play-fallback" type="button" hidden>Play video</button>
+          <p class="media-error" role="status" hidden>Unable to load this video. <a href="./static/videos/real-dino.mp4">Open the original video</a>.</p>
+        </div><p class="media-caption">The real and simulated dinosaur are shown throughout the full twisting sequence. Compare the deformation during contact and release.</p></div><div class="experiment-panel" id="real-panel-bottle" role="tabpanel" aria-labelledby="real-tab-bottle" tabindex="0" hidden>
+          <div class="example-heading"><h3>Bottle <span>· Pick and tilt</span></h3><span class="duration">18 s · 1×</span></div>
+          <div class="comparison-labels" aria-hidden="true"><span>Real robot</span><span>Physics-based simulation</span></div><div class="media-unit" data-media-unit>
+          <video id="video-real-bottle" data-src="./static/videos/real-bottle.mp4" poster="./static/posters/real-bottle.jpg"
+              width="2560" height="720" autoplay muted loop playsinline preload="none" controls
+              aria-label="Bottle — Pick and tilt">Your browser does not support embedded video. <a href="./static/videos/real-bottle.mp4">Open this video</a>.</video>
+          <button class="play-fallback" type="button" hidden>Play video</button>
+          <p class="media-error" role="status" hidden>Unable to load this video. <a href="./static/videos/real-bottle.mp4">Open the original video</a>.</p>
+        </div><p class="media-caption">A side-by-side view of the real manipulation and its simulated counterpart, with the full pick-and-tilt sequence preserved.</p></div></div>
+      </div>
+    </section>
+<section class="section chapter" id="video" aria-labelledby="video-title">
+      <div class="container is-max-desktop">
+        <div class="section-divider"><span class="section-number" aria-hidden="true">06</span><span class="divider-line"></span></div>
+        <header class="chapter-heading"><h2 id="video-title" class="title is-3">Full video</h2><p>The complete DiagGen project film, from motivation to applications.</p></header><div class="media-unit" data-media-unit>
+          <video id="video-full-film" data-src="./static/videos/full-film.mp4" poster="./static/posters/full-film.jpg"
+              width="1920" height="1080" autoplay muted loop playsinline preload="none" controls
+              aria-label="Complete DiagGen project film">Your browser does not support embedded video. <a href="./static/videos/full-film.mp4">Open this video</a>.</video>
+          <button class="play-fallback" type="button" hidden>Play video</button>
+          <p class="media-error" role="status" hidden>Unable to load this video. <a href="./static/videos/full-film.mp4">Open the original video</a>.</p>
+        </div><p class="media-caption full-film-link"><span>3 min · Sound available in the player</span><a href="https://www.youtube.com/watch?v=_sARsG-4vyM" target="_blank" rel="noreferrer">Watch on YouTube ↗</a></p>
+      </div>
+    </section>
+<section class="section chapter" id="BibTeX" aria-labelledby="BibTeX-title">
+      <div class="container is-max-desktop">
+        <div class="section-divider"><span class="section-number" aria-hidden="true">07</span><span class="divider-line"></span></div>
+        <header class="chapter-heading"><h2 id="BibTeX-title" class="title is-3">Citation</h2><p>If you find this work useful, please cite DiagGen.</p></header><div class="citation-heading"><span>BibTeX</span><button type="button" class="text-button" id="copy-citation">Copy citation</button><span id="copy-status" role="status" class="sr-only"></span></div>      <pre><code>@misc{chen2026diaggenagenticgenerationdeformable,
   title        = {DiagGen: Agentic Generation of Deformable Assets with Sim-based Diagnostics for Robotic Simulation},
   author       = {Guanxiong Chen and Yiduo Qu and Qianjun Xia and Pengyu Jing and Yixian Cheng and Bole Ma and Pengzhi Yang and Bingyang Zhou and Ziming Li and Shashwat Suri and Gongbo Sun and Chao Liu and Peter Yichen Chen and Ziqiu Zeng and Fan Shi},
   year         = {2026},
@@ -192,9 +323,9 @@
   primaryClass = {cs.RO},
   url          = {https://arxiv.org/abs/2609.23103},
 }</code></pre>
-    </div>
-  </section>
-
+      </div>
+    </section>
+  </main>
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
@@ -214,13 +345,14 @@
               we just ask that you link back to this page in the footer.
             </p>
             <p>
-              Source code mainly borrowed from Keunhong Park's <a href="https://nerfies.github.io/">Nerfies website</a>.
+              Website template adapted from Keunhong Park's <a href="https://nerfies.github.io/">Nerfies website</a>.
             </p>
           </div>
         </div>
       </div>
     </div>
   </footer>
-  <script type="module" src="./static/js/asset-viewer.js"></script>
+
+</div>
 </body>
 </html>
