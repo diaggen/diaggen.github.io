@@ -21,7 +21,7 @@ Then open <http://localhost:8000/> in a browser.
 - All videos start muted and play at 1×. The full film uses the same native player and keeps a link to YouTube. Native media avoids a separate third-party autoplay dependency.
 - Plush, Dino and Bottle share a single side-by-side video player with native controls. Plush uses the archive's full real camera clip and matching woven-basket simulation (both 282 frames at 30 fps). The USB hub repair comparison retains its existing synchronized controls.
 - The existing Three.js viewer loads near the gallery and suspends its render loop offscreen. Display modes, camera controls, source detail and part segmentation are preserved.
-- A horizontal section navigation bar sits below the Paper / arXiv / Code buttons, highlights the current section and wraps into rows on smaller screens. Reduced-motion preferences disable decorative transitions and smooth scrolling, while videos retain visible playback controls.
+- The desktop progress rail becomes horizontal navigation on smaller screens. Reduced-motion preferences disable decorative transitions and smooth scrolling, while videos retain visible playback controls.
 
 See [media provenance](docs/media-provenance.md) for source selections, inset timing and result definitions. The simulation insets and Plush comparison can be rebuilt with `scripts/compose-simulation.py` and `scripts/compose-plush.py`. Apply the final delivery step with `scripts/add-end-holds.py` from a preserved baseline directory containing the pre-hold MP4s and manifest. The scripts’ `--help` output lists source and destination arguments; the hold script rejects already-padded baselines to prevent stacking holds.
 

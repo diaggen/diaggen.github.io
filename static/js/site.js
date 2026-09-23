@@ -2,11 +2,14 @@
 (() => {
   'use strict';
 
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
   function initNavigation() {
     const entries = [...document.querySelectorAll('.progress-item')].map(item => ({
       item, link: item.querySelector('a'), section: document.getElementById(item.dataset.section),
     })).filter(entry => entry.section);
     let scheduled = false;
+    let current = '';
 
     function sync() {
       scheduled = false;
@@ -17,9 +20,20 @@
       });
       entries.forEach(({ item, link }, index) => {
         item.classList.toggle('active', index === active);
+        item.classList.toggle('passed', index < active);
         if (index === active) link.setAttribute('aria-current', 'location');
         else link.removeAttribute('aria-current');
       });
+      const activeLink = entries[active]?.link;
+      if (activeLink && current !== activeLink.hash) {
+        current = activeLink.hash;
+        // Keep the active item visible in the horizontal mobile adaptation.
+        if (window.innerWidth < 1280) {
+          const track = activeLink.closest('.progress-track');
+          const left = activeLink.offsetLeft - track.clientWidth / 2 + activeLink.offsetWidth / 2;
+          track.scrollTo({ left, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+        }
+      }
     }
     function queue() {
       if (!scheduled) { scheduled = true; requestAnimationFrame(sync); }

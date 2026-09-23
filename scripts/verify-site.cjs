@@ -164,19 +164,9 @@ fs.mkdirSync(outputDir, { recursive: true });
       await page.waitForFunction(() => document.getElementById('asset-status').dataset.state==='ready');
     });
     await screenshot('desktop-gallery', '#asset-panel');
-    await check('Horizontal section navigation sits below publication links and jumps to sections', async () => {
-      const layout = await page.evaluate(() => {
-        const nav=document.querySelector('.section-nav');
-        const buttons=document.querySelector('.publication-links');
-        const content=document.querySelector('#overview .container').getBoundingClientRect();
-        return {below:nav.getBoundingClientRect().top>=buttons.getBoundingClientRect().bottom,
-          inHeader:!!nav.closest('.publication-header'),position:getComputedStyle(nav).position,
-          centered:Math.abs(content.left+content.width/2-innerWidth/2)<1};
-      });
-      assert.deepEqual(layout,{below:true,inHeader:true,position:'static',centered:true});
-      assert.equal(await page.locator('.section-nav a').count(),7);
-      await page.locator('.section-nav a[href="#method"]').click();
-      await page.waitForFunction(()=>location.hash==='#method' && document.querySelector('.section-nav a[href="#method"]').getAttribute('aria-current')==='location');
+    await check('Desktop rail stays outside the content', async () => {
+      const bounds = await page.evaluate(() => ({rail:document.querySelector('.page-rail').getBoundingClientRect().right,content:document.querySelector('#overview .container').getBoundingClientRect().left}));
+      assert.ok(bounds.rail<bounds.content);
     });
     for (const width of [390,768,1024]) {
       await page.setViewportSize({width,height:844});
@@ -187,7 +177,6 @@ fs.mkdirSync(outputDir, { recursive: true });
         }
       });
       if (width===390) {
-        await screenshot('mobile-navigation','.section-nav');
         await screenshot('mobile-overview','#video-overview');
         await screenshot('mobile-results','.results-card');
         await screenshot('mobile-simulation','#simulation .experiment-gallery');
