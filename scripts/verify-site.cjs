@@ -45,6 +45,21 @@ fs.mkdirSync(outputDir, { recursive: true });
     await page.screenshot({ path: path.join(outputDir, name + '.png') });
     report.screenshots.push(name + '.png');
   }
+  async function navigateToSection(id) {
+    await page.locator(`.section-nav a[href="#${id}"]`).click();
+    await page.waitForFunction(id => {
+      const nav = document.querySelector('.section-nav');
+      const section = document.getElementById(id);
+      const offset = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop)
+        + parseFloat(getComputedStyle(section).scrollMarginTop);
+      return location.hash === '#' + id
+        && document.querySelector(`.section-nav a[href="#${id}"]`).getAttribute('aria-current') === 'location'
+        && Math.abs(nav.getBoundingClientRect().top) < 1
+        && Math.abs(section.getBoundingClientRect().top - offset) < 2;
+    }, id);
+    assert.ok(await page.locator('#' + id + ' .chapter-heading').evaluate(heading =>
+      heading.getBoundingClientRect().top > document.querySelector('.section-nav').getBoundingClientRect().bottom));
+  }
   try {
     await page.goto(baseURL, { waitUntil: 'networkidle' });
     await check('Five sections, full film, then citation; three Method blocks', async () => {
@@ -167,31 +182,38 @@ fs.mkdirSync(outputDir, { recursive: true });
       await page.waitForFunction(() => document.getElementById('asset-status').dataset.state==='ready');
     });
     await screenshot('desktop-gallery', '#asset-panel');
-    await check('Horizontal section navigation sits below publication links and jumps to sections', async () => {
+    await check('Navigation starts below publication links, sticks while scrolling and clears anchor headings', async () => {
+      await page.evaluate(() => window.scrollTo({top:0, behavior:'instant'}));
       const layout = await page.evaluate(() => {
         const nav=document.querySelector('.section-nav');
         const buttons=document.querySelector('.publication-links');
         const content=document.querySelector('#overview .container').getBoundingClientRect();
         return {below:nav.getBoundingClientRect().top>=buttons.getBoundingClientRect().bottom,
-          inHeader:!!nav.closest('.publication-header'),position:getComputedStyle(nav).position,
+          inMain:nav.parentElement.tagName==='MAIN',position:getComputedStyle(nav).position,
           centered:Math.abs(content.left+content.width/2-innerWidth/2)<1};
       });
-      assert.deepEqual(layout,{below:true,inHeader:true,position:'static',centered:true});
+      assert.deepEqual(layout,{below:true,inMain:true,position:'sticky',centered:true});
       assert.equal(await page.locator('.section-nav a').count(),7);
-      await page.locator('.section-nav a[href="#method"]').click();
-      await page.waitForFunction(()=>location.hash==='#method' && document.querySelector('.section-nav a[href="#method"]').getAttribute('aria-current')==='location');
+      await navigateToSection('method');
+      await navigateToSection('simulation');
+      await screenshot('desktop-sticky-navigation');
     });
     for (const width of [390,768,1024]) {
       await page.setViewportSize({width,height:844});
-      await check(`No horizontal page overflow at ${width}px`, async () => {
+      await check(`No horizontal page overflow and sticky navigation clears headings at ${width}px`, async () => {
         for (const id of ['overview','method','simulation','real-world','BibTeX']) {
           await center('#'+id+' .chapter-heading');
           assert.ok(await page.evaluate(() => document.documentElement.scrollWidth<=innerWidth+1), id);
         }
+        await navigateToSection('method');
+        await navigateToSection('simulation');
       });
       if (width===390) {
+        await screenshot('mobile-sticky-navigation');
+        await page.evaluate(() => window.scrollTo({top:0, behavior:'instant'}));
         await screenshot('mobile-navigation','.section-nav');
         await screenshot('mobile-overview','#video-overview');
+        await screenshot('mobile-contributions','.contribution-list');
         await screenshot('mobile-results','.results-card');
         await screenshot('mobile-simulation','#simulation .experiment-gallery');
         await page.locator('#real-tab-plush').click();

@@ -12,10 +12,12 @@ The reusable Playwright suite passed all 19 checks in isolated headless Chrome:
 - All four complete simulation scenes with bottom-left close-up insets, 1× action playback and updated durations including the final holds.
 - Plush / Dino / Bottle use the same single-player layout, native controls and 2560×720 comparison format.
 - Keyboard tab selection, full-frame aspect ratios and the existing interactive asset viewer.
-- Horizontal navigation placement below the publication links, clickable section jumps, active-section highlighting, centered content and no horizontal page overflow at 390, 768 and 1024 px.
+- Horizontal navigation placement below the publication links, sticking at the top beyond the header, clickable section jumps that keep headings below the bar, active-section highlighting, centered content and no horizontal page overflow at 390, 768 and 1024 px.
 - No JavaScript errors or failed local HTTP requests.
 
 A previous targeted autoplay check confirmed that a simulated rejection exposes a working manual-play fallback. The navigation now wraps on mobile so every section link is visible without horizontal scrolling. Desktop and phone page renders were visually reviewed, including the PMSC results, simulation tabs and real-world comparisons.
+
+The sticky navigation also passed the warm-cache regression. The three contribution paragraphs use a tighter 1.6 line height; section divider and Method block spacing remain unchanged. Desktop and phone renders of the sticky bar and phone contribution text were visually reviewed.
 
 The preview server supports byte-range requests; browser seeking was checked against that server. Browser verification used Chrome 153 on macOS. Safari, Firefox and physical mobile devices have not been tested.
 
